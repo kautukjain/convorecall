@@ -79,7 +79,13 @@ async function main(): Promise<void> {
     console.log("  set DATABASE_URL, then run: pnpm --filter @opengong/api prisma:migrate");
     return;
   }
-
+// Client generation does not need a live DB. Always run it so `pnpm dev` can import
+  // PrismaClient even when Docker/Postgres is unavailable on this machine.
+  console.log("• Generating Prisma client…");
+  if (!run("pnpm", ["db:generate"])) {
+    console.error("  prisma generate failed.");
+    process.exit(1);
+  }
   console.log("• Starting Postgres…");
   if (!run("docker", ["compose", "-f", composeFile, "up", "-d"])) {
     console.error("  Failed to start Postgres. Is Docker running?");
