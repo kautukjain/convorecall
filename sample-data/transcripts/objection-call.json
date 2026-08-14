@@ -1,0 +1,366 @@
+{
+  "callId": "objection-call",
+  "note": "Hand-authored fixture. Ground truth for evals/objections/objection-call.golden.json. Written as speech, not prose: fillers, restarts and half-turns are deliberate.",
+  "speakers": [
+    "Rep",
+    "Prospect"
+  ],
+  "speakerNames": [
+    {
+      "label": "Prospect",
+      "name": "Marcus",
+      "quote": "Hey Marcus. Can you hear me? You were breaking up a second ago."
+    }
+  ],
+  "voices": {
+    "Rep": "stock_joy_en_us",
+    "Prospect": "stock_lorne_en_gb"
+  },
+  "durationMs": 217420,
+  "segments": [
+    {
+      "id": "seg-1",
+      "index": 1,
+      "speaker": "Rep",
+      "startMs": 0,
+      "endMs": 4680,
+      "text": "Hey Marcus. Can you hear me? You were breaking up a second ago."
+    },
+    {
+      "id": "seg-2",
+      "index": 2,
+      "speaker": "Prospect",
+      "startMs": 5200,
+      "endMs": 10240,
+      "text": "Yeah, no, I can hear you now. Sorry, I was on the other network."
+    },
+    {
+      "id": "seg-3",
+      "index": 3,
+      "speaker": "Rep",
+      "startMs": 10760,
+      "endMs": 14720,
+      "text": "No worries. Right, you've got a hard stop at half past?"
+    },
+    {
+      "id": "seg-4",
+      "index": 4,
+      "speaker": "Prospect",
+      "startMs": 15240,
+      "endMs": 18840,
+      "text": "Half past, yeah. I've got another one straight after, so."
+    },
+    {
+      "id": "seg-5",
+      "index": 5,
+      "speaker": "Rep",
+      "startMs": 19360,
+      "endMs": 26560,
+      "text": "Okay. So last time you were going to take the notes thing back to the team. How did that go?"
+    },
+    {
+      "id": "seg-6",
+      "index": 6,
+      "speaker": "Prospect",
+      "startMs": 27080,
+      "endMs": 28160,
+      "text": "Mm. Mixed, honestly."
+    },
+    {
+      "id": "seg-7",
+      "index": 7,
+      "speaker": "Rep",
+      "startMs": 28340,
+      "endMs": 29240,
+      "text": "Mixed how?"
+    },
+    {
+      "id": "seg-8",
+      "index": 8,
+      "speaker": "Prospect",
+      "startMs": 29420,
+      "endMs": 38060,
+      "text": "So the team liked it. Like, everyone who actually saw the notes bit liked it, that wasn't the issue. The issue is the number."
+    },
+    {
+      "id": "seg-9",
+      "index": 9,
+      "speaker": "Rep",
+      "startMs": 38580,
+      "endMs": 39480,
+      "text": "Right."
+    },
+    {
+      "id": "seg-10",
+      "index": 10,
+      "speaker": "Prospect",
+      "startMs": 39660,
+      "endMs": 40740,
+      "text": "It's the number."
+    },
+    {
+      "id": "seg-11",
+      "index": 11,
+      "speaker": "Rep",
+      "startMs": 40920,
+      "endMs": 42720,
+      "text": "Say more about the number."
+    },
+    {
+      "id": "seg-12",
+      "index": 12,
+      "speaker": "Prospect",
+      "startMs": 43240,
+      "endMs": 55840,
+      "text": "Well, we're — okay so we're looking at fourteen seats, right? And at your list that's, what, north of forty thousand a year. We spent about twelve on the whole sales stack last year. So."
+    },
+    {
+      "id": "seg-13",
+      "index": 13,
+      "speaker": "Rep",
+      "startMs": 56360,
+      "endMs": 60680,
+      "text": "Yeah. That's a real jump. I'm not going to pretend it isn't."
+    },
+    {
+      "id": "seg-14",
+      "index": 14,
+      "speaker": "Prospect",
+      "startMs": 61200,
+      "endMs": 64800,
+      "text": "We're not sure we can justify that pricing right now."
+    },
+    {
+      "id": "seg-15",
+      "index": 15,
+      "speaker": "Rep",
+      "startMs": 65320,
+      "endMs": 70000,
+      "text": "Totally fair. What would need to be true for it to make sense?"
+    },
+    {
+      "id": "seg-16",
+      "index": 16,
+      "speaker": "Prospect",
+      "startMs": 70520,
+      "endMs": 74480,
+      "text": "Honestly? Honestly we'd need buy-in from finance, and Dave owns that."
+    },
+    {
+      "id": "seg-17",
+      "index": 17,
+      "speaker": "Rep",
+      "startMs": 75000,
+      "endMs": 81480,
+      "text": "Is Dave someone who wants a business case, or does he need to hear it from the team?"
+    },
+    {
+      "id": "seg-18",
+      "index": 18,
+      "speaker": "Prospect",
+      "startMs": 82000,
+      "endMs": 88120,
+      "text": "Business case. He'll want to see what we stop paying for. That's — that's the conversation, really."
+    },
+    {
+      "id": "seg-19",
+      "index": 19,
+      "speaker": "Rep",
+      "startMs": 88640,
+      "endMs": 91880,
+      "text": "So what are you paying for today that overlaps?"
+    },
+    {
+      "id": "seg-20",
+      "index": 20,
+      "speaker": "Prospect",
+      "startMs": 92400,
+      "endMs": 99240,
+      "text": "We've got Chorus. That's about nine a year. And nobody, I mean nobody uses the coaching side of it."
+    },
+    {
+      "id": "seg-21",
+      "index": 21,
+      "speaker": "Rep",
+      "startMs": 99760,
+      "endMs": 103720,
+      "text": "So the recording spend is real, the coaching spend is shelfware."
+    },
+    {
+      "id": "seg-22",
+      "index": 22,
+      "speaker": "Prospect",
+      "startMs": 104240,
+      "endMs": 105320,
+      "text": "Pretty much, yeah."
+    },
+    {
+      "id": "seg-23",
+      "index": 23,
+      "speaker": "Rep",
+      "startMs": 105500,
+      "endMs": 108740,
+      "text": "Do you know why the coaching side didn't stick?"
+    },
+    {
+      "id": "seg-24",
+      "index": 24,
+      "speaker": "Prospect",
+      "startMs": 109260,
+      "endMs": 114660,
+      "text": "Adoption was maybe thirty percent in the first quarter and then it just fell off."
+    },
+    {
+      "id": "seg-25",
+      "index": 25,
+      "speaker": "Rep",
+      "startMs": 115180,
+      "endMs": 117340,
+      "text": "Any sense of what caused that?"
+    },
+    {
+      "id": "seg-26",
+      "index": 26,
+      "speaker": "Prospect",
+      "startMs": 117860,
+      "endMs": 130820,
+      "text": "Reps didn't trust the summaries. You'd read one and it'd say the customer was ready to buy, and then you'd listen back and they said nothing like that. Once that happens twice you stop opening it."
+    },
+    {
+      "id": "seg-27",
+      "index": 27,
+      "speaker": "Rep",
+      "startMs": 131340,
+      "endMs": 138540,
+      "text": "Yeah. That's the thing we built around, so. Every line in ours points back at the moment in the call."
+    },
+    {
+      "id": "seg-28",
+      "index": 28,
+      "speaker": "Prospect",
+      "startMs": 139060,
+      "endMs": 142660,
+      "text": "I saw that in the demo. That part I believed."
+    },
+    {
+      "id": "seg-29",
+      "index": 29,
+      "speaker": "Rep",
+      "startMs": 143180,
+      "endMs": 150740,
+      "text": "So if I put the offset together — Chorus spend against ours — is that the shape of what Dave needs?"
+    },
+    {
+      "id": "seg-30",
+      "index": 30,
+      "speaker": "Prospect",
+      "startMs": 151260,
+      "endMs": 159180,
+      "text": "That plus something on time saved. Our reps spend, what, forty minutes a day writing things up in the CRM. Maybe more."
+    },
+    {
+      "id": "seg-31",
+      "index": 31,
+      "speaker": "Rep",
+      "startMs": 159700,
+      "endMs": 161500,
+      "text": "Forty minutes across how many?"
+    },
+    {
+      "id": "seg-32",
+      "index": 32,
+      "speaker": "Prospect",
+      "startMs": 162020,
+      "endMs": 163820,
+      "text": "Fourteen. Same as the seats."
+    },
+    {
+      "id": "seg-33",
+      "index": 33,
+      "speaker": "Rep",
+      "startMs": 164340,
+      "endMs": 170460,
+      "text": "Okay. So I'll do a one-pager, the offset and the time math. When does Dave need it?"
+    },
+    {
+      "id": "seg-34",
+      "index": 34,
+      "speaker": "Prospect",
+      "startMs": 170980,
+      "endMs": 176380,
+      "text": "He does budget reviews Thursdays. If it's in his inbox Wednesday he'll have read it."
+    },
+    {
+      "id": "seg-35",
+      "index": 35,
+      "speaker": "Rep",
+      "startMs": 176900,
+      "endMs": 182660,
+      "text": "Wednesday. Do you want to be on that call with him or should I go direct?"
+    },
+    {
+      "id": "seg-36",
+      "index": 36,
+      "speaker": "Prospect",
+      "startMs": 183180,
+      "endMs": 190020,
+      "text": "No, send it to me first. I'll forward it. He'll ignore a vendor email but he won't ignore mine."
+    },
+    {
+      "id": "seg-37",
+      "index": 37,
+      "speaker": "Rep",
+      "startMs": 190540,
+      "endMs": 194860,
+      "text": "Understood. Anything else that could sink this before it gets to him?"
+    },
+    {
+      "id": "seg-38",
+      "index": 38,
+      "speaker": "Prospect",
+      "startMs": 195380,
+      "endMs": 200780,
+      "text": "Erm. Security review, eventually. But that's not a blocker for the budget conversation, that's after."
+    },
+    {
+      "id": "seg-39",
+      "index": 39,
+      "speaker": "Rep",
+      "startMs": 201300,
+      "endMs": 204900,
+      "text": "Good. I'll keep the page to money and time then."
+    },
+    {
+      "id": "seg-40",
+      "index": 40,
+      "speaker": "Prospect",
+      "startMs": 205420,
+      "endMs": 208300,
+      "text": "Yeah. Dave doesn't read past page one, so."
+    },
+    {
+      "id": "seg-41",
+      "index": 41,
+      "speaker": "Rep",
+      "startMs": 208820,
+      "endMs": 212780,
+      "text": "Noted. I'll get it to you Tuesday, gives you a day."
+    },
+    {
+      "id": "seg-42",
+      "index": 42,
+      "speaker": "Prospect",
+      "startMs": 213300,
+      "endMs": 215820,
+      "text": "That works. Right, I've got to jump."
+    },
+    {
+      "id": "seg-43",
+      "index": 43,
+      "speaker": "Rep",
+      "startMs": 216340,
+      "endMs": 217420,
+      "text": "Thanks Marcus. Tuesday."
+    }
+  ]
+}

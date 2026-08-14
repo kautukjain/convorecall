@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Semantic names only — components never reference a raw colour
+ * (.cursor/rules/design-system.mdc).
+ *
+ * The palette is warm paper and pine. One grayscale family, mixed toward ochre rather
+ * than blue, so light mode reads as paper stock and dark mode as ink rather than as a
+ * dimmed screen. Light mode's page is off-white, which lets a white card sit above it
+ * without a shadow doing the lifting.
+ *
+ * Two accents, each with one job. Ink drives primary actions. Pine marks things the
+ * system has verified — it is the hue in the app icon and appears nowhere decorative.
+ * The warm marker tone stays reserved for the evidence highlight, where it reads as a
+ * pen over the line being cited. No gradients: elevation is a hairline plus a tight
+ * shadow, never a glow.
+ *
+ * `light-dark()` lets each token be declared once. `color-scheme` decides which half
+ * applies, so switching theme is one attribute on <html> rather than a duplicated block.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --bg: light-dark(#f7f6f3, #0b0b0a);
+  --surface: light-dark(#fffefc, #131311);
+  --surface-raised: light-dark(#f1efea, #1b1a18);
+  --surface-sunken: light-dark(#efece5, #080807);
+  --border: light-dark(#e4e0d8, #272622);
+  --border-strong: light-dark(#cfc9be, #3a3833);
+
+  /*
+   * Three text weights, and all three clear WCAG AA (4.5:1) against the *raised* surface,
+   * which is the lowest-contrast ground any of them ever sits on. Measured, not eyeballed:
+   * muted 6.2:1 light / 7.5:1 dark, subtle 4.6:1 light / 4.9:1 dark. Metadata is the text
+   * most often set in the weakest colour and at the smallest size, so it is the text that
+   * cannot afford to be decorative.
+   */
+  --fg: light-dark(#191814, #eeece7);
+  --fg-muted: light-dark(#5b584f, #adaaa1);
+  --fg-subtle: light-dark(#706c62, #8d887f);
+
+  /* Ink. Primary actions and focus. */
+  --accent: light-dark(#191814, #eeece7);
+  --accent-fg: light-dark(#fffefc, #0b0b0a);
+
+  /* Pine. Verified, and the mark. Never decoration. */
+  --brand: light-dark(#0f463b, #6fc0a8);
+  --brand-fg: light-dark(#fffefc, #06120f);
+  --brand-surface: light-dark(#edf3f0, #101f1b);
+  --brand-border: light-dark(#c6d9d2, #27443b);
+
+  /* The marker. */
+  --highlight: light-dark(#f8e7b4, #3a3016);
+  --highlight-edge: light-dark(#cfa93f, #8a7128);
+
+  --danger: light-dark(#8c2f22, #e58579);
+  --danger-bg: light-dark(#fdf2f0, #2a1512);
+  --danger-border: light-dark(#f0d5cf, #46231d);
+  --warn-fg: light-dark(#75540f, #d9b262);
+  --warn-bg: light-dark(#fdf6e6, #2a2213);
+
+  /*
+   * Elevation, and it is quiet. A shadow here says "this sits above the page", not "look
+   * at me" — the hairline border carries most of the separation, which is also why dark
+   * mode can get away with shadows that are barely visible.
+   *
+   * Two levels, because the app has two: at rest, and lifted under the pointer. The design
+   * system permits a third; it belongs with the first overlay that needs it and not before.
+   */
+  --shadow-1: 0 1px 2px light-dark(rgb(35 30 20 / 0.05), rgb(0 0 0 / 0.4));
+  --shadow-2:
+    0 1px 2px light-dark(rgb(35 30 20 / 0.04), rgb(0 0 0 / 0.35)),
+    0 4px 12px -3px light-dark(rgb(35 30 20 / 0.08), rgb(0 0 0 / 0.45));
+}
+
+/* An explicit choice wins over the operating system. */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-sunken: var(--surface-sunken);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-subtle: var(--fg-subtle);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-brand: var(--brand);
+  --color-brand-fg: var(--brand-fg);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-border: var(--brand-border);
+  --color-highlight: var(--highlight);
+  --color-highlight-edge: var(--highlight-edge);
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+  --color-danger-border: var(--danger-border);
+  --color-warn: var(--warn-fg);
+  --color-warn-bg: var(--warn-bg);
+
+  /*
+   * Instrument Sans for the interface: a grotesque with slightly narrow proportions,
+   * so dense metadata rows stay legible at 12px. Newsreader for the document voice —
+   * titles, the summary, and quoted speech, which is what a reader is here to read.
+   * Both are variable and self-hosted by next/font (see layout.tsx).
+   */
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+
+  --radius-sm: 0.3125rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+@utility elev-1 {
+  box-shadow: var(--shadow-1);
+}
+
+@utility elev-2 {
+  box-shadow: var(--shadow-2);
+}
+
+/*
+ * A section label: small, tracked, and set above a hairline. It replaces a heavier
+ * heading, so the eye finds structure without another type size competing for it.
+ */
+@utility label-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+html {
+  background-color: var(--bg);
+  /* Keeps a scrollbar's arrival from shifting the layout sideways. */
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: contextual;
+}
+
+/* Hierarchy comes from weight and tracking, not size alone. */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.017em;
+}
+
+/* Newsreader carries an optical size axis; let the browser use it. */
+.font-serif,
+.font-serif * {
+  font-optical-sizing: auto;
+}
+
+/* Display type is set tighter than body — large text needs less air between letters. */
+@utility text-display {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  letter-spacing: -0.021em;
+  line-height: 1.08;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/*
+ * The transcript scrolls a lot, so its scrollbar is part of the design rather than an
+ * afterthought. Thin, in the grayscale family, and only as present as it needs to be.
+ */
+@utility scroll-quiet {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: var(--border-strong);
+  }
+}
+
+/*
+ * Fades the top and bottom edges of a scroll region so clipped text reads as "more
+ * below" instead of as a hard cut. This is a mask, not a decorative gradient.
+ */
+@utility scroll-faded {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 1.25rem,
+    black calc(100% - 1.75rem),
+    transparent 100%
+  );
+}
+
+/*
+ * The evidence highlight. A marker settling over the cited line — the one moment of
+ * motion in the product, and it exists to answer "where", not to decorate.
+ */
+@keyframes evidence-settle {
+  from {
+    background-color: var(--highlight-edge);
+  }
+  to {
+    background-color: var(--highlight);
+  }
+}
+
+.evidence-hit {
+  animation: evidence-settle 200ms cubic-bezier(0.2, 0, 0, 1) forwards;
+  box-shadow: inset 2px 0 0 var(--highlight-edge);
+}
+
+/*
+ * The playback cursor: which line is being spoken right now.
+ *
+ * Deliberately not the marker. Amber means "this is the receipt you asked for" and is a
+ * deliberate act; this is an ambient position indicator that moves on its own, so it gets the
+ * quieter treatment — pine rail, raised ground, no animation. A line that is both cited and
+ * playing shows the marker, because the citation is the thing the reader asked to see.
+ */
+.now-playing {
+  background-color: var(--surface-raised);
+  box-shadow: inset 2px 0 0 var(--brand);
+}
+
+/* Loading is continuous rather than an animation with an end, so it breathes slowly. */
+@keyframes skeleton-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.skeleton {
+  animation: skeleton-pulse 1.6s ease-in-out infinite;
+  background-color: var(--surface-raised);
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evidence-hit {
+    animation: none;
+    background-color: var(--highlight);
+  }
+
+  .skeleton {
+    animation: none;
+  }
+}

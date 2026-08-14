@@ -1,0 +1,72 @@
+{
+  "callId": "enterprise-call",
+  "recordedFrom": {
+    "model": "google/gemma-4-31b-it",
+    "at": "2026-08-13T09:23:07.098Z"
+  },
+  "sections": {
+    "objections": [
+      {
+        "claim": "The prospect is concerned that sales reps may not actually use the product based on past experience.",
+        "quote": "My worry isn't the product though. We've bought three of these and the reps used none of them.",
+        "confidence": 1
+      },
+      {
+        "claim": "The security lead requires written documentation of the data processing agreement before proceeding.",
+        "quote": "Then I need that in writing before this goes anywhere. That's a hard requirement, not a preference.",
+        "confidence": 1
+      },
+      {
+        "claim": "Procurement refuses to sign an annual contract for an initial purchase.",
+        "quote": "We don't sign annual on a first purchase.",
+        "confidence": 1
+      },
+      {
+        "claim": "The prospect requires industry-specific references.",
+        "quote": "And I'll want two references in our industry.",
+        "confidence": 1
+      },
+      {
+        "claim": "Sarah wants references from customers who have been using the product for at least a year.",
+        "quote": "I want someone who's been live a year, not three months.",
+        "confidence": 1
+      },
+      {
+        "claim": "The prospect will not proceed with the purchase if the process extends into the next quarter.",
+        "quote": "If it slips past then, we're not doing it this year.",
+        "confidence": 1
+      }
+    ],
+    "intent": [
+      {
+        "claim": "The prospect is moving toward a purchase provided security requirements are met and the contract is redrafted for a six-month term, with a deadline of the current quarter.",
+        "quote": "What I don't want is this dragging into next quarter. If it slips past then, we're not doing it this year.",
+        "confidence": 0.9
+      }
+    ],
+    "nextSteps": [
+      {
+        "claim": "The Rep will provide the agreement and subprocessor list this week.",
+        "quote": "I'll get you the agreement and the subprocessor list this week.",
+        "confidence": 1
+      },
+      {
+        "claim": "The Rep will provide two industry references.",
+        "quote": "I can get you two.",
+        "confidence": 1
+      },
+      {
+        "claim": "The Rep will send the agreement today.",
+        "quote": "I'll send it today.",
+        "confidence": 1
+      },
+      {
+        "claim": "The Rep will send redlines for the six month paper on Monday.",
+        "quote": "I'll get redlines over Monday.",
+        "confidence": 1
+      }
+    ],
+    "summary": "The prospect is interested in purchasing provided security requirements are met and the contract is redrafted for a six-month term, as procurement will not sign an annual contract for an initial purchase. Key concerns include historical lack of user adoption by sales reps and a strict deadline to close within the current quarter. The security lead requires written documentation of the data processing agreement. Additionally, the prospect requires two industry-specific references from customers who have been live for at least one year. Next steps include the rep sending the agreement today, providing the subprocessor list this week, delivering two industry references, and sending redlines for the six-month contract on Monday.",
+    "followUpEmail": "Thank you for the conversation. We discussed concerns regarding sales rep adoption based on previous experiences and the requirement for industry-specific references from customers who have been live for at least a year. We also addressed the need for written data processing documentation for the security lead and the requirement for a six-month initial contract term rather than an annual one, noting that the purchase must be completed within the current quarter.\n\nI have committed to the following actions:\n- Send the agreement today.\n- Provide the agreement and subprocessor list this week.\n- Send redlines for the six-month contract on Monday.\n- Provide two industry references."
+  }
+}

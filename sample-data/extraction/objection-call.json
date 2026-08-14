@@ -1,0 +1,42 @@
+{
+  "callId": "objection-call",
+  "recordedFrom": {
+    "model": "google/gemma-4-31b-it",
+    "at": "2026-08-13T09:22:32.312Z"
+  },
+  "sections": {
+    "objections": [
+      {
+        "claim": "The pricing is too high compared to their current spend.",
+        "quote": "We spent about twelve on the whole sales stack last year. So.",
+        "confidence": 1
+      },
+      {
+        "claim": "The prospect is unable to justify the current pricing.",
+        "quote": "We're not sure we can justify that pricing right now.",
+        "confidence": 1
+      },
+      {
+        "claim": "The purchase requires approval from the finance owner.",
+        "quote": "Honestly we'd need buy-in from finance, and Dave owns that.",
+        "confidence": 1
+      }
+    ],
+    "intent": [
+      {
+        "claim": "The prospect is hesitant about the pricing but is open to pursuing a business case for budget approval from finance.",
+        "quote": "We're not sure we can justify that pricing right now.",
+        "confidence": 0.9
+      }
+    ],
+    "nextSteps": [
+      {
+        "claim": "The Rep will create a one-pager including the offset and time math and send it to Marcus by Tuesday.",
+        "quote": "I'll do a one-pager, the offset and the timeSB time math... I'll get it to you Tuesday, gives you a day.",
+        "confidence": 1
+      }
+    ],
+    "summary": "The prospect expressed concerns that the pricing is too high compared to their previous annual spend of twelve and is currently unable to justify the cost. Approval from the finance owner, Dave, is required for the purchase. The prospect is open to pursuing a business case to seek budget approval from finance.",
+    "followUpEmail": "Thank you for the conversation. We discussed that the current pricing is high compared to the previous annual spend of twelve on the sales stack, and that the current pricing is difficult to justify at this time. We also noted that purchase approval is required from the finance owner.\n\nAs agreed, I will work on pursuing a business case to help secure budget approval from finance."
+  }
+}

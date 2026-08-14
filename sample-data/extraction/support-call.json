@@ -1,0 +1,47 @@
+{
+  "callId": "support-call",
+  "recordedFrom": {
+    "model": "google/gemma-4-31b-it",
+    "at": "2026-08-13T09:22:45.638Z"
+  },
+  "sections": {
+    "objections": [
+      {
+        "claim": "The prospect is concerned that the conversation will be a sales pitch.",
+        "quote": "As long as it's not a pitch.",
+        "confidence": 1
+      },
+      {
+        "claim": "The prospect is concerned about the cost of the new plan.",
+        "quote": "And what's that cost?",
+        "confidence": 1
+      },
+      {
+        "claim": "The prospect is concerned about justifying the price increase internally because the team perceives the tool as having failed.",
+        "quote": "I'd have to justify it, and right now the story internally is the tool broke.",
+        "confidence": 1
+      }
+    ],
+    "intent": [
+      {
+        "claim": "The prospect is open to upgrading to a higher volume tier but needs pricing and usage data to justify the cost internally.",
+        "quote": "Send it to me and my director.",
+        "confidence": 0.9
+      }
+    ],
+    "nextSteps": [
+      {
+        "claim": "Nadia will send the exact cost of the volume tier and the usage curve to Priya and her director today.",
+        "quote": "I'd rather send you the exact number today than give you a range on a call.",
+        "confidence": 1
+      },
+      {
+        "claim": "Nadia will send the cost for the Manchester seats separately.",
+        "quote": "And I'll put the Manchester seats in separately so you can approve those on their own.",
+        "confidence": 1
+      }
+    ],
+    "summary": "The prospect is open to upgrading to a higher volume tier but expressed concerns regarding the cost and the ability to justify a price increase internally, noting a perception that the tool has failed. Nadia will send the exact cost of the volume tier and the usage curve to Priya and her director today, with the cost for Manchester seats provided separately.",
+    "followUpEmail": "Thank you for the conversation. We discussed the possibility of upgrading to a higher volume tier, as well as the concerns regarding the cost and the internal perception that the tool has failed. To help justify the price increase internally, I will provide the necessary pricing and usage data.\n\nI have agreed to the following actions:\n- Send the exact cost of the volume tier and the usage curve today.\n- Send the cost for the Manchester seats separately for individual approval."
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "callId": "enterprise-call",
+  "note": "Hand-authored fixture. Multi-stakeholder enterprise call: four speakers, competing priorities, people talking over each other.",
+  "speakers": [
+    "Rep",
+    "VP Sales",
+    "Security",
+    "Procurement"
+  ],
+  "speakerNames": [
+    {
+      "label": "VP Sales",
+      "name": "Sarah",
+      "quote": "Understood. So Sarah, you've seen the notes output. Do you want to start?"
+    }
+  ],
+  "voices": {
+    "Rep": "stock_cyrus_en_us",
+    "VP Sales": "stock_rhea_en_us",
+    "Security": "stock_ewan_en_in",
+    "Procurement": "stock_daphne_en_gb"
+  },
+  "durationMs": 174640,
+  "segments": [
+    {
+      "id": "seg-1",
+      "index": 1,
+      "speaker": "Rep",
+      "startMs": 0,
+      "endMs": 6120,
+      "text": "Okay, I think that's everyone. Sarah, Ravi, Ruth — thanks, I know four calendars took a fortnight."
+    },
+    {
+      "id": "seg-2",
+      "index": 2,
+      "speaker": "VP Sales",
+      "startMs": 6640,
+      "endMs": 10960,
+      "text": "Let's use it well, I've got a hard stop on the hour."
+    },
+    {
+      "id": "seg-3",
+      "index": 3,
+      "speaker": "Rep",
+      "startMs": 11480,
+      "endMs": 16160,
+      "text": "Understood. So Sarah, you've seen the notes output. Do you want to start?"
+    },
+    {
+      "id": "seg-4",
+      "index": 4,
+      "speaker": "VP Sales",
+      "startMs": 16680,
+      "endMs": 26760,
+      "text": "Yeah. So — it was the first one of these where I actually believed what I was reading. Every claim had the quote sat right next to it."
+    },
+    {
+      "id": "seg-5",
+      "index": 5,
+      "speaker": "Rep",
+      "startMs": 27280,
+      "endMs": 28720,
+      "text": "That's the design, yeah."
+    },
+    {
+      "id": "seg-6",
+      "index": 6,
+      "speaker": "VP Sales",
+      "startMs": 28900,
+      "endMs": 35380,
+      "text": "My worry isn't the product though. We've bought three of these and the reps used none of them."
+    },
+    {
+      "id": "seg-7",
+      "index": 7,
+      "speaker": "Rep",
+      "startMs": 35900,
+      "endMs": 37340,
+      "text": "What made them stop?"
+    },
+    {
+      "id": "seg-8",
+      "index": 8,
+      "speaker": "VP Sales",
+      "startMs": 37520,
+      "endMs": 41480,
+      "text": "They didn't trust it. And it lived somewhere they never went."
+    },
+    {
+      "id": "seg-9",
+      "index": 9,
+      "speaker": "Rep",
+      "startMs": 42000,
+      "endMs": 48120,
+      "text": "Right, so the second one's the CRM push. The first one is what the receipts are for."
+    },
+    {
+      "id": "seg-10",
+      "index": 10,
+      "speaker": "Security",
+      "startMs": 48640,
+      "endMs": 51520,
+      "text": "Sorry, can I come in on the recordings?"
+    },
+    {
+      "id": "seg-11",
+      "index": 11,
+      "speaker": "Rep",
+      "startMs": 52040,
+      "endMs": 52940,
+      "text": "Please."
+    },
+    {
+      "id": "seg-12",
+      "index": 12,
+      "speaker": "Security",
+      "startMs": 53120,
+      "endMs": 55280,
+      "text": "Where does the audio actually live?"
+    },
+    {
+      "id": "seg-13",
+      "index": 13,
+      "speaker": "Rep",
+      "startMs": 55800,
+      "endMs": 60120,
+      "text": "Object storage, your region, encrypted at rest. It doesn't leave the tenant."
+    },
+    {
+      "id": "seg-14",
+      "index": 14,
+      "speaker": "Security",
+      "startMs": 60640,
+      "endMs": 64960,
+      "text": "And the model calls? Are transcripts going out to a third party?"
+    },
+    {
+      "id": "seg-15",
+      "index": 15,
+      "speaker": "Rep",
+      "startMs": 65480,
+      "endMs": 70160,
+      "text": "Yes. The transcript goes to the model provider, under our data processing agreement."
+    },
+    {
+      "id": "seg-16",
+      "index": 16,
+      "speaker": "Security",
+      "startMs": 70680,
+      "endMs": 76800,
+      "text": "Then I need that in writing before this goes anywhere. That's a hard requirement, not a preference."
+    },
+    {
+      "id": "seg-17",
+      "index": 17,
+      "speaker": "Rep",
+      "startMs": 77320,
+      "endMs": 82000,
+      "text": "That's fair. I'll get you the agreement and the subprocessor list this week."
+    },
+    {
+      "id": "seg-18",
+      "index": 18,
+      "speaker": "Security",
+      "startMs": 82520,
+      "endMs": 85760,
+      "text": "And retention. How long do you hold the audio?"
+    },
+    {
+      "id": "seg-19",
+      "index": 19,
+      "speaker": "Rep",
+      "startMs": 86280,
+      "endMs": 91320,
+      "text": "It's configurable. Default's ninety days, you can set it to delete straight after processing."
+    },
+    {
+      "id": "seg-20",
+      "index": 20,
+      "speaker": "Security",
+      "startMs": 91840,
+      "endMs": 94360,
+      "text": "Delete after processing is what we'd want."
+    },
+    {
+      "id": "seg-21",
+      "index": 21,
+      "speaker": "Procurement",
+      "startMs": 94880,
+      "endMs": 97040,
+      "text": "Can I ask the boring question."
+    },
+    {
+      "id": "seg-22",
+      "index": 22,
+      "speaker": "Rep",
+      "startMs": 97560,
+      "endMs": 98460,
+      "text": "Go on."
+    },
+    {
+      "id": "seg-23",
+      "index": 23,
+      "speaker": "Procurement",
+      "startMs": 98640,
+      "endMs": 101160,
+      "text": "What's the number and what's the term."
+    },
+    {
+      "id": "seg-24",
+      "index": 24,
+      "speaker": "Rep",
+      "startMs": 101680,
+      "endMs": 105640,
+      "text": "Fourteen seats at list is forty two thousand a year, annual."
+    },
+    {
+      "id": "seg-25",
+      "index": 25,
+      "speaker": "Procurement",
+      "startMs": 106160,
+      "endMs": 109040,
+      "text": "We don't sign annual on a first purchase."
+    },
+    {
+      "id": "seg-26",
+      "index": 26,
+      "speaker": "Rep",
+      "startMs": 109560,
+      "endMs": 110460,
+      "text": "Okay."
+    },
+    {
+      "id": "seg-27",
+      "index": 27,
+      "speaker": "Procurement",
+      "startMs": 110640,
+      "endMs": 112800,
+      "text": "Six months, then we talk again."
+    },
+    {
+      "id": "seg-28",
+      "index": 28,
+      "speaker": "Rep",
+      "startMs": 113320,
+      "endMs": 118000,
+      "text": "I can do six months if we agree a review date up front."
+    },
+    {
+      "id": "seg-29",
+      "index": 29,
+      "speaker": "Procurement",
+      "startMs": 118520,
+      "endMs": 122120,
+      "text": "That works. And I'll want two references in our industry."
+    },
+    {
+      "id": "seg-30",
+      "index": 30,
+      "speaker": "VP Sales",
+      "startMs": 122640,
+      "endMs": 128760,
+      "text": "Yeah, references matter to me too. I want someone who's been live a year, not three months."
+    },
+    {
+      "id": "seg-31",
+      "index": 31,
+      "speaker": "Rep",
+      "startMs": 129280,
+      "endMs": 133600,
+      "text": "I can get you two. One of them's a similar seat count."
+    },
+    {
+      "id": "seg-32",
+      "index": 32,
+      "speaker": "Security",
+      "startMs": 134120,
+      "endMs": 139520,
+      "text": "Before references though — I want the security review scheduled. That's the long pole here."
+    },
+    {
+      "id": "seg-33",
+      "index": 33,
+      "speaker": "Rep",
+      "startMs": 140040,
+      "endMs": 142200,
+      "text": "Understood. Security first, references in parallel."
+    },
+    {
+      "id": "seg-34",
+      "index": 34,
+      "speaker": "VP Sales",
+      "startMs": 142720,
+      "endMs": 150280,
+      "text": "What I don't want is this dragging into next quarter. If it slips past then, we're not doing it this year."
+    },
+    {
+      "id": "seg-35",
+      "index": 35,
+      "speaker": "Rep",
+      "startMs": 150800,
+      "endMs": 154760,
+      "text": "Okay, so let's work backwards. Security review in the next fortnight?"
+    },
+    {
+      "id": "seg-36",
+      "index": 36,
+      "speaker": "Security",
+      "startMs": 155280,
+      "endMs": 158160,
+      "text": "If the agreement's with me by Friday, yes."
+    },
+    {
+      "id": "seg-37",
+      "index": 37,
+      "speaker": "Rep",
+      "startMs": 158680,
+      "endMs": 160480,
+      "text": "Friday. I'll send it today."
+    },
+    {
+      "id": "seg-38",
+      "index": 38,
+      "speaker": "Procurement",
+      "startMs": 161000,
+      "endMs": 166400,
+      "text": "And I need the six month paper redrafted before I can route it for signature."
+    },
+    {
+      "id": "seg-39",
+      "index": 39,
+      "speaker": "Rep",
+      "startMs": 166920,
+      "endMs": 168720,
+      "text": "I'll get redlines over Monday."
+    },
+    {
+      "id": "seg-40",
+      "index": 40,
+      "speaker": "VP Sales",
+      "startMs": 169240,
+      "endMs": 174640,
+      "text": "Good. Let's get back together in two weeks with security done. I've got to go."
+    }
+  ]
+}

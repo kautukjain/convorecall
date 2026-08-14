@@ -1,0 +1,151 @@
+// Schema of record: docs/Database.md. Changes belong there first.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CallSource {
+  UPLOAD
+  URL
+  FIXTURE
+}
+
+enum JobState {
+  QUEUED
+  TRANSCRIBING
+  EXTRACTING
+  SHIPPED
+  PARTIAL
+  FAILED
+  DEADLINE
+}
+
+enum NotesExitStatus {
+  SHIPPED
+  PARTIAL
+  FAILED
+  DEADLINE
+}
+
+model Call {
+  id           String     @id @default(uuid()) @db.Uuid
+  source       CallSource
+  sourceRef    String?
+  storageKey   String?
+  originalName String?
+  mimeType     String?
+  sizeBytes    Int?
+  durationMs   Int?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  job      Job?
+  segments TranscriptSegment[]
+  notes    Notes?
+  shares   Share[]
+
+  @@index([createdAt])
+  @@map("calls")
+}
+
+model Job {
+  id     String @id @default(uuid()) @db.Uuid
+  callId String @unique @db.Uuid
+  call   Call   @relation(fields: [callId], references: [id], onDelete: Cascade)
+
+  state       JobState  @default(QUEUED)
+  attempt     Int       @default(0)
+  claimedBy   String?
+  heartbeatAt DateTime?
+  startedAt   DateTime?
+  finishedAt  DateTime?
+  deadlineAt  DateTime
+
+  tokenBudget Int
+  tokensUsed  Int @default(0)
+
+  failureReason  String?
+  /** Client-safe explanation. `lastError` stays operator-only. */
+  failureMessage String?
+  lastError      String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  events JobEvent[]
+
+  @@index([state, createdAt])
+  @@index([state, heartbeatAt])
+  @@index([state, deadlineAt])
+  @@map("jobs")
+}
+
+model JobEvent {
+  id    BigInt @id @default(autoincrement())
+  jobId String @db.Uuid
+  job   Job    @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  type      String
+  payload   Json
+  createdAt DateTime @default(now())
+
+  @@index([jobId, id])
+  @@map("job_events")
+}
+
+model TranscriptSegment {
+  id     String @id @default(uuid()) @db.Uuid
+  callId String @db.Uuid
+  call   Call   @relation(fields: [callId], references: [id], onDelete: Cascade)
+
+  index   Int
+  speaker String
+  startMs Int
+  endMs   Int
+  text    String
+
+  @@unique([callId, index])
+  @@index([callId, startMs])
+  @@map("transcript_segments")
+}
+
+model Notes {
+  id     String @id @default(uuid()) @db.Uuid
+  callId String @unique @db.Uuid
+  call   Call   @relation(fields: [callId], references: [id], onDelete: Cascade)
+
+  exitStatus NotesExitStatus
+  payload    Json
+
+  droppedClaims   Int      @default(0)
+  droppedSections String[] @default([])
+
+  promptVersion String
+  sttModel      String?
+  llmModel      String
+  tokensUsed    Int
+  durationMs    Int
+
+  generatedAt DateTime @default(now())
+
+  @@map("notes")
+}
+
+model Share {
+  id     String @id @default(uuid()) @db.Uuid
+  token  String @unique
+  callId String @db.Uuid
+  call   Call   @relation(fields: [callId], references: [id], onDelete: Cascade)
+
+  expiresAt DateTime?
+  revokedAt DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([callId])
+  @@map("shares")
+}

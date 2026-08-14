@@ -1,0 +1,47 @@
+{
+  "callId": "discovery-call",
+  "recordedFrom": {
+    "model": "google/gemma-4-31b-it",
+    "at": "2026-08-13T09:21:55.238Z"
+  },
+  "sections": {
+    "objections": [
+      {
+        "claim": "Lack of trust in AI summaries is a blocker.",
+        "quote": "the trust thing is the blocker",
+        "confidence": 1
+      },
+      {
+        "claim": "The prospect needs to verify if they are permitted to share a recording.",
+        "quote": "I need to check I'm actually allowed to share it",
+        "confidence": 1
+      }
+    ],
+    "intent": [
+      {
+        "claim": "The prospect is interested in testing the product with a real call recording to see if it solves their trust issues with summaries.",
+        "quote": "Run it on a real call of ours. Not a demo call. One of mine, with all the mess in it.",
+        "confidence": 0.95
+      }
+    ],
+    "nextSteps": [
+      {
+        "claim": "Marcus will send a call recording to the Rep.",
+        "quote": "I'll pull one from last week, there's a good one where the customer just talks in circles for forty minutes.",
+        "confidence": 1
+      },
+      {
+        "claim": "Marcus will send the recording by Thursday.",
+        "quote": "Give me till Thursday though. I need to check I'm actually allowed to share it.",
+        "confidence": 1
+      },
+      {
+        "claim": "The Rep will provide notes based on the recording on the same day they receive it.",
+        "quote": "Thursday's fine, I'll turn it round same day.",
+        "confidence": 1
+      }
+    ],
+    "summary": "The prospect is interested in testing the product using a real call recording to determine if it can overcome their lack of trust in AI summaries. The prospect must first verify if they are permitted to share the recording. Marcus will send a recording from last week by Thursday, and the Rep will provide notes based on that recording the same day it is received.",
+    "followUpEmail": "We discussed how a lack of trust in AI summaries is currently a blocker. To address this, we agreed to test the product using a real call recording rather than a demo to see if it can effectively handle complex conversations.\n\nAgreed actions:\n- You will verify if you are permitted to share a recording and send one by Thursday.\n- I will provide notes based on that recording on the same day I receive it."
+  }
+}

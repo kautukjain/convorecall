@@ -1,0 +1,25 @@
+name: opengong-lite
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: opengong-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: opengong
+      POSTGRES_PASSWORD: opengong
+      POSTGRES_DB: opengong
+    ports:
+      # Host 5433 on purpose: 5432 is usually taken by a locally installed Postgres,
+      # and silently connecting to the wrong server is a miserable first-run failure.
+      - "5433:5432"
+    volumes:
+      - opengong-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U opengong -d opengong"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  opengong-pgdata:

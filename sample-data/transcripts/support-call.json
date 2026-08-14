@@ -1,0 +1,293 @@
+{
+  "callId": "support-call",
+  "note": "Hand-authored fixture. Support ticket that surfaces an expansion signal; an account manager joins mid-call.",
+  "speakers": [
+    "Support",
+    "Customer",
+    "Account Manager"
+  ],
+  "speakerNames": [
+    {
+      "label": "Customer",
+      "name": "Priya",
+      "quote": "Thanks for holding, Priya. Right, I've got your ticket up. You're hitting the upload limit."
+    },
+    {
+      "label": "Account Manager",
+      "name": "Nadia",
+      "quote": "Hi, it's Nadia. I caught the end of that — you've added a team and outgrown the plan."
+    }
+  ],
+  "voices": {
+    "Support": "stock_jasper_en_gb",
+    "Customer": "stock_priya_en_in",
+    "Account Manager": "stock_ylva_en_us"
+  },
+  "durationMs": 180680,
+  "segments": [
+    {
+      "id": "seg-1",
+      "index": 1,
+      "speaker": "Support",
+      "startMs": 0,
+      "endMs": 5400,
+      "text": "Thanks for holding, Priya. Right, I've got your ticket up. You're hitting the upload limit."
+    },
+    {
+      "id": "seg-2",
+      "index": 2,
+      "speaker": "Customer",
+      "startMs": 5920,
+      "endMs": 10960,
+      "text": "Every day this week. It just stops taking calls about three in the afternoon."
+    },
+    {
+      "id": "seg-3",
+      "index": 3,
+      "speaker": "Support",
+      "startMs": 11480,
+      "endMs": 21200,
+      "text": "Yeah, that matches what I'm seeing here. So you're on the plan that caps at two hundred calls a month, and you're at two hundred and forty."
+    },
+    {
+      "id": "seg-4",
+      "index": 4,
+      "speaker": "Customer",
+      "startMs": 21720,
+      "endMs": 24600,
+      "text": "Two hundred and forty? That can't be right."
+    },
+    {
+      "id": "seg-5",
+      "index": 5,
+      "speaker": "Support",
+      "startMs": 25120,
+      "endMs": 29440,
+      "text": "It is, I'm afraid. Your volume roughly doubled about six weeks ago."
+    },
+    {
+      "id": "seg-6",
+      "index": 6,
+      "speaker": "Customer",
+      "startMs": 29960,
+      "endMs": 33200,
+      "text": "Six weeks — oh. That'll be Manchester coming on."
+    },
+    {
+      "id": "seg-7",
+      "index": 7,
+      "speaker": "Support",
+      "startMs": 33720,
+      "endMs": 34800,
+      "text": "That'd do it."
+    },
+    {
+      "id": "seg-8",
+      "index": 8,
+      "speaker": "Customer",
+      "startMs": 34980,
+      "endMs": 38580,
+      "text": "I genuinely didn't think about a ceiling. Nobody mentioned one."
+    },
+    {
+      "id": "seg-9",
+      "index": 9,
+      "speaker": "Support",
+      "startMs": 39100,
+      "endMs": 47740,
+      "text": "No, understood. Look, I can lift the cap for the rest of this month so you're not blocked while you sort it out properly."
+    },
+    {
+      "id": "seg-10",
+      "index": 10,
+      "speaker": "Customer",
+      "startMs": 48260,
+      "endMs": 53660,
+      "text": "Please. Because the reps are working around it, and that's worse than not having it."
+    },
+    {
+      "id": "seg-11",
+      "index": 11,
+      "speaker": "Support",
+      "startMs": 54180,
+      "endMs": 55980,
+      "text": "Working around it how, sorry?"
+    },
+    {
+      "id": "seg-12",
+      "index": 12,
+      "speaker": "Customer",
+      "startMs": 56500,
+      "endMs": 62260,
+      "text": "Taking their own notes again. Which is the thing we bought you to stop them doing."
+    },
+    {
+      "id": "seg-13",
+      "index": 13,
+      "speaker": "Support",
+      "startMs": 62780,
+      "endMs": 67460,
+      "text": "Yeah. Okay, cap's lifted, that's done now — can you try an upload?"
+    },
+    {
+      "id": "seg-14",
+      "index": 14,
+      "speaker": "Customer",
+      "startMs": 67980,
+      "endMs": 70500,
+      "text": "Erm. Yeah, that's gone through. Thank you."
+    },
+    {
+      "id": "seg-15",
+      "index": 15,
+      "speaker": "Support",
+      "startMs": 71020,
+      "endMs": 78220,
+      "text": "Good. Can I bring Nadia in? She looks after your account. This is a plan thing really, not a bug."
+    },
+    {
+      "id": "seg-16",
+      "index": 16,
+      "speaker": "Customer",
+      "startMs": 78740,
+      "endMs": 81260,
+      "text": "As long as it's not a pitch."
+    },
+    {
+      "id": "seg-17",
+      "index": 17,
+      "speaker": "Support",
+      "startMs": 81780,
+      "endMs": 82680,
+      "text": "No, no."
+    },
+    {
+      "id": "seg-18",
+      "index": 18,
+      "speaker": "Account Manager",
+      "startMs": 82860,
+      "endMs": 89340,
+      "text": "Hi, it's Nadia. I caught the end of that — you've added a team and outgrown the plan."
+    },
+    {
+      "id": "seg-19",
+      "index": 19,
+      "speaker": "Customer",
+      "startMs": 89860,
+      "endMs": 95620,
+      "text": "We put eleven people in Manchester on it. And nobody told us there was a limit."
+    },
+    {
+      "id": "seg-20",
+      "index": 20,
+      "speaker": "Account Manager",
+      "startMs": 96140,
+      "endMs": 103700,
+      "text": "No, and that's on us. You should've heard about that from me when your volume changed, not from a failed upload."
+    },
+    {
+      "id": "seg-21",
+      "index": 21,
+      "speaker": "Customer",
+      "startMs": 104220,
+      "endMs": 111060,
+      "text": "I appreciate you saying that. It's been a bad week for the team's confidence in it, to be honest."
+    },
+    {
+      "id": "seg-22",
+      "index": 22,
+      "speaker": "Account Manager",
+      "startMs": 111580,
+      "endMs": 115900,
+      "text": "I can imagine. What would make that right, other than the cap?"
+    },
+    {
+      "id": "seg-23",
+      "index": 23,
+      "speaker": "Customer",
+      "startMs": 116420,
+      "endMs": 123620,
+      "text": "Knowing it won't happen again, really. If we grow again next quarter I don't want to find out like this."
+    },
+    {
+      "id": "seg-24",
+      "index": 24,
+      "speaker": "Account Manager",
+      "startMs": 124140,
+      "endMs": 133500,
+      "text": "So — move you onto the volume tier, no monthly cap, and I'll put an alert at eighty percent so you hear it from us first."
+    },
+    {
+      "id": "seg-25",
+      "index": 25,
+      "speaker": "Customer",
+      "startMs": 134020,
+      "endMs": 135460,
+      "text": "And what's that cost?"
+    },
+    {
+      "id": "seg-26",
+      "index": 26,
+      "speaker": "Account Manager",
+      "startMs": 135640,
+      "endMs": 143200,
+      "text": "More than you're paying now. I'd rather send you the exact number today than give you a range on a call."
+    },
+    {
+      "id": "seg-27",
+      "index": 27,
+      "speaker": "Customer",
+      "startMs": 143720,
+      "endMs": 149480,
+      "text": "Mm. I'd have to justify it, and right now the story internally is the tool broke."
+    },
+    {
+      "id": "seg-28",
+      "index": 28,
+      "speaker": "Account Manager",
+      "startMs": 150000,
+      "endMs": 158640,
+      "text": "The honest story is you grew and the plan didn't. I'll put the usage curve in the same email, it sort of argues itself."
+    },
+    {
+      "id": "seg-29",
+      "index": 29,
+      "speaker": "Customer",
+      "startMs": 159160,
+      "endMs": 163120,
+      "text": "That would help, yeah. Send it to me and my director."
+    },
+    {
+      "id": "seg-30",
+      "index": 30,
+      "speaker": "Account Manager",
+      "startMs": 163640,
+      "endMs": 169760,
+      "text": "Today. And I'll put the Manchester seats in separately so you can approve those on their own."
+    },
+    {
+      "id": "seg-31",
+      "index": 31,
+      "speaker": "Customer",
+      "startMs": 170280,
+      "endMs": 173160,
+      "text": "Good, because those two go to different people."
+    },
+    {
+      "id": "seg-32",
+      "index": 32,
+      "speaker": "Account Manager",
+      "startMs": 173680,
+      "endMs": 176200,
+      "text": "Noted. Anything else while I've got you?"
+    },
+    {
+      "id": "seg-33",
+      "index": 33,
+      "speaker": "Customer",
+      "startMs": 176720,
+      "endMs": 180680,
+      "text": "No. Get me the numbers and I'll take it from there."
+    }
+  ]
+}

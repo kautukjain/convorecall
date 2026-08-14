@@ -76,3 +76,5 @@ uploads/
 **/__pycache__/
 *.pyc
 node_modules/
+CLAUDE.md
+AGENTS.md

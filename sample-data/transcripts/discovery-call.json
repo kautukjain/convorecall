@@ -1,0 +1,294 @@
+{
+  "callId": "discovery-call",
+  "note": "Hand-authored fixture. First discovery call, earlier in the same deal as objection-call.",
+  "speakers": [
+    "Rep",
+    "Prospect"
+  ],
+  "speakerNames": [
+    {
+      "label": "Prospect",
+      "name": "Marcus",
+      "quote": "Marcus? Hi. Sorry, I think I was two minutes late there."
+    }
+  ],
+  "voices": {
+    "Rep": "stock_joy_en_us",
+    "Prospect": "stock_lorne_en_gb"
+  },
+  "durationMs": 174700,
+  "segments": [
+    {
+      "id": "seg-1",
+      "index": 1,
+      "speaker": "Rep",
+      "startMs": 0,
+      "endMs": 3960,
+      "text": "Marcus? Hi. Sorry, I think I was two minutes late there."
+    },
+    {
+      "id": "seg-2",
+      "index": 2,
+      "speaker": "Prospect",
+      "startMs": 4480,
+      "endMs": 8080,
+      "text": "No, you're fine, I was still on the last one."
+    },
+    {
+      "id": "seg-3",
+      "index": 3,
+      "speaker": "Rep",
+      "startMs": 8600,
+      "endMs": 13640,
+      "text": "Ha. Yeah. Okay so — I've got half an hour, is that still right?"
+    },
+    {
+      "id": "seg-4",
+      "index": 4,
+      "speaker": "Prospect",
+      "startMs": 14160,
+      "endMs": 15600,
+      "text": "Half an hour, yeah."
+    },
+    {
+      "id": "seg-5",
+      "index": 5,
+      "speaker": "Rep",
+      "startMs": 15780,
+      "endMs": 22620,
+      "text": "Great. So before I show you anything, just tell me what's going on. What made you take the call?"
+    },
+    {
+      "id": "seg-6",
+      "index": 6,
+      "speaker": "Prospect",
+      "startMs": 23140,
+      "endMs": 33220,
+      "text": "Erm. So. We've got fourteen reps, and every one of them writes up calls differently. And half of them don't write them up at all, if I'm honest."
+    },
+    {
+      "id": "seg-7",
+      "index": 7,
+      "speaker": "Rep",
+      "startMs": 33740,
+      "endMs": 34640,
+      "text": "Mm."
+    },
+    {
+      "id": "seg-8",
+      "index": 8,
+      "speaker": "Prospect",
+      "startMs": 34820,
+      "endMs": 36980,
+      "text": "Which is fine until it isn't."
+    },
+    {
+      "id": "seg-9",
+      "index": 9,
+      "speaker": "Rep",
+      "startMs": 37500,
+      "endMs": 39300,
+      "text": "What happens when it isn't?"
+    },
+    {
+      "id": "seg-10",
+      "index": 10,
+      "speaker": "Prospect",
+      "startMs": 39820,
+      "endMs": 48820,
+      "text": "Deals stall and nobody knows why. Like, I'll ask about something in the forecast and I get three different stories depending on who I ask."
+    },
+    {
+      "id": "seg-11",
+      "index": 11,
+      "speaker": "Rep",
+      "startMs": 49340,
+      "endMs": 51500,
+      "text": "So the forecast is basically memory."
+    },
+    {
+      "id": "seg-12",
+      "index": 12,
+      "speaker": "Prospect",
+      "startMs": 52020,
+      "endMs": 53820,
+      "text": "It's built on vibes. Yeah."
+    },
+    {
+      "id": "seg-13",
+      "index": 13,
+      "speaker": "Rep",
+      "startMs": 54340,
+      "endMs": 56860,
+      "text": "Are you recording calls at the moment?"
+    },
+    {
+      "id": "seg-14",
+      "index": 14,
+      "speaker": "Prospect",
+      "startMs": 57380,
+      "endMs": 61700,
+      "text": "We've got Chorus, so yeah, it records everything. That bit works fine."
+    },
+    {
+      "id": "seg-15",
+      "index": 15,
+      "speaker": "Rep",
+      "startMs": 62220,
+      "endMs": 64020,
+      "text": "And the bit that doesn't?"
+    },
+    {
+      "id": "seg-16",
+      "index": 16,
+      "speaker": "Prospect",
+      "startMs": 64540,
+      "endMs": 73540,
+      "text": "Nobody trusts the summaries. Somebody read one that said a customer was ready to sign and — they'd said the opposite. On the actual call."
+    },
+    {
+      "id": "seg-17",
+      "index": 17,
+      "speaker": "Rep",
+      "startMs": 74060,
+      "endMs": 80540,
+      "text": "Yeah, that's the thing that kills it, isn't it. Once it's wrong in a way you can see."
+    },
+    {
+      "id": "seg-18",
+      "index": 18,
+      "speaker": "Prospect",
+      "startMs": 81060,
+      "endMs": 86100,
+      "text": "Then you stop reading it. That's exactly what happened, usage fell off a cliff."
+    },
+    {
+      "id": "seg-19",
+      "index": 19,
+      "speaker": "Rep",
+      "startMs": 86620,
+      "endMs": 97060,
+      "text": "Right, so — the difference with what we do, and I'll show you, is every line points back at the moment. You click it, you land on the sentence."
+    },
+    {
+      "id": "seg-20",
+      "index": 20,
+      "speaker": "Prospect",
+      "startMs": 97580,
+      "endMs": 100460,
+      "text": "Hang on, so I could actually check it."
+    },
+    {
+      "id": "seg-21",
+      "index": 21,
+      "speaker": "Rep",
+      "startMs": 100980,
+      "endMs": 105300,
+      "text": "You can check all of it. That's sort of the whole point."
+    },
+    {
+      "id": "seg-22",
+      "index": 22,
+      "speaker": "Prospect",
+      "startMs": 105820,
+      "endMs": 113380,
+      "text": "Hm. Okay. That would change the conversation with my team, because the trust thing is the blocker. It's not the features."
+    },
+    {
+      "id": "seg-23",
+      "index": 23,
+      "speaker": "Rep",
+      "startMs": 113900,
+      "endMs": 117140,
+      "text": "Who else would need to be comfortable with it?"
+    },
+    {
+      "id": "seg-24",
+      "index": 24,
+      "speaker": "Prospect",
+      "startMs": 117660,
+      "endMs": 123420,
+      "text": "Dave in finance owns the budget. And security will want a look, because it's call recordings."
+    },
+    {
+      "id": "seg-25",
+      "index": 25,
+      "speaker": "Rep",
+      "startMs": 123940,
+      "endMs": 126820,
+      "text": "Sure. Is security a blocker or a checkpoint?"
+    },
+    {
+      "id": "seg-26",
+      "index": 26,
+      "speaker": "Prospect",
+      "startMs": 127340,
+      "endMs": 130940,
+      "text": "Checkpoint. They're reasonable if you fill the questionnaire in properly."
+    },
+    {
+      "id": "seg-27",
+      "index": 27,
+      "speaker": "Rep",
+      "startMs": 131460,
+      "endMs": 136500,
+      "text": "Okay. What would you want to see before you brought either of them in?"
+    },
+    {
+      "id": "seg-28",
+      "index": 28,
+      "speaker": "Prospect",
+      "startMs": 137020,
+      "endMs": 144940,
+      "text": "Honestly? Run it on a real call of ours. Not a demo call. One of mine, with all the mess in it."
+    },
+    {
+      "id": "seg-29",
+      "index": 29,
+      "speaker": "Rep",
+      "startMs": 145460,
+      "endMs": 150500,
+      "text": "I can do that. Send me a recording, I'll send you back the notes."
+    },
+    {
+      "id": "seg-30",
+      "index": 30,
+      "speaker": "Prospect",
+      "startMs": 151020,
+      "endMs": 158580,
+      "text": "Alright. I'll pull one from last week, there's a good one where the customer just talks in circles for forty minutes."
+    },
+    {
+      "id": "seg-31",
+      "index": 31,
+      "speaker": "Rep",
+      "startMs": 159100,
+      "endMs": 161260,
+      "text": "Those are the good ones, genuinely."
+    },
+    {
+      "id": "seg-32",
+      "index": 32,
+      "speaker": "Prospect",
+      "startMs": 161780,
+      "endMs": 167180,
+      "text": "Give me till Thursday though. I need to check I'm actually allowed to share it."
+    },
+    {
+      "id": "seg-33",
+      "index": 33,
+      "speaker": "Rep",
+      "startMs": 167700,
+      "endMs": 171660,
+      "text": "No, of course. Thursday's fine, I'll turn it round same day."
+    },
+    {
+      "id": "seg-34",
+      "index": 34,
+      "speaker": "Prospect",
+      "startMs": 172180,
+      "endMs": 174700,
+      "text": "Right. Let's see if it holds up."
+    }
+  ]
+}

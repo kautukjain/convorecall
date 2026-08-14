@@ -1,0 +1,47 @@
+{
+  "callId": "demo-call",
+  "recordedFrom": {
+    "model": "google/gemma-4-31b-it",
+    "at": "2026-08-13T09:22:06.845Z"
+  },
+  "sections": {
+    "objections": [
+      {
+        "claim": "The product needs to integrate with the CRM because reps won't use a separate tab.",
+        "quote": "It's got to land in the CRM. My reps aren't going to go looking for another tab, they just won't.",
+        "confidence": 1
+      },
+      {
+        "claim": "The lack of a current HubSpot integration is a significant gap.",
+        "quote": "That's a real gap for us.",
+        "confidence": 1
+      },
+      {
+        "claim": "The prospect has concerns regarding the pricing.",
+        "quote": "And the other thing's the number, obviously. I did look at the pricing page.",
+        "confidence": 1
+      }
+    ],
+    "intent": [
+      {
+        "claim": "The prospect is interested in moving forward but requires a CRM integration date and financial approval.",
+        "quote": "It's not a no, but I'd want a date.",
+        "confidence": 0.9
+      }
+    ],
+    "nextSteps": [
+      {
+        "claim": "Prospect will check Dave's calendar and send an invite for Thursday or Friday.",
+        "quote": "Thursday or Friday, I'll check his calendar and send an invite.",
+        "confidence": 1
+      },
+      {
+        "claim": "Rep will prepare a one-page document for the meeting with Dave.",
+        "quote": "I'll have the page ready either way.",
+        "confidence": 1
+      }
+    ],
+    "summary": "The prospect is interested in moving forward but raised objections regarding pricing and the lack of a HubSpot integration, stating that the product must integrate with their CRM for representative adoption. Next steps include the prospect sending a calendar invite for Thursday or Friday to meet with Dave, and the representative preparing a one-page document for that meeting. Final approval is contingent on financial sign-off and a confirmed integration date.",
+    "followUpEmail": "Thank you for the conversation. We discussed the necessity of a CRM integration to ensure rep adoption and noted that the current lack of a HubSpot integration is a significant gap. We also touched upon concerns regarding the pricing. While there is interest in moving forward, this is contingent upon receiving a date for the CRM integration and obtaining financial approval.\n\nAs agreed, I will prepare a one-page document for the upcoming meeting. I look forward to receiving the calendar invite for Thursday or Friday."
+  }
+}

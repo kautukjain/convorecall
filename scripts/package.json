@@ -1,0 +1,10 @@
+{
+  "name": "@opengong/scripts",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "dependencies": {
+    "@opengong/shared": "workspace:*",
+    "@opengong/types": "workspace:*"
+  }
+}

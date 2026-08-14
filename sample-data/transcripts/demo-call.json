@@ -1,0 +1,295 @@
+{
+  "callId": "demo-call",
+  "note": "Hand-authored fixture. Product demo: the rep walks Marcus through notes generated from his own recording, following the discovery call.",
+  "speakers": [
+    "Rep",
+    "Prospect"
+  ],
+  "voices": {
+    "Rep": "stock_joy_en_us",
+    "Prospect": "stock_lorne_en_gb"
+  },
+  "durationMs": 160540,
+  "segments": [
+    {
+      "id": "seg-1",
+      "index": 1,
+      "speaker": "Rep",
+      "startMs": 0,
+      "endMs": 5760,
+      "text": "Right, I've got the call you sent. Before I share, how well do you remember it?"
+    },
+    {
+      "id": "seg-2",
+      "index": 2,
+      "speaker": "Prospect",
+      "startMs": 6280,
+      "endMs": 9880,
+      "text": "Reasonably. That's the one where he wouldn't commit to anything."
+    },
+    {
+      "id": "seg-3",
+      "index": 3,
+      "speaker": "Rep",
+      "startMs": 10400,
+      "endMs": 16160,
+      "text": "Perfect, because that's the test. If I show you something wrong you'll spot it straight away."
+    },
+    {
+      "id": "seg-4",
+      "index": 4,
+      "speaker": "Prospect",
+      "startMs": 16680,
+      "endMs": 17760,
+      "text": "Go on then."
+    },
+    {
+      "id": "seg-5",
+      "index": 5,
+      "speaker": "Rep",
+      "startMs": 17940,
+      "endMs": 21180,
+      "text": "Let me just — can you see my screen?"
+    },
+    {
+      "id": "seg-6",
+      "index": 6,
+      "speaker": "Prospect",
+      "startMs": 21700,
+      "endMs": 22780,
+      "text": "Yep, got it."
+    },
+    {
+      "id": "seg-7",
+      "index": 7,
+      "speaker": "Rep",
+      "startMs": 22960,
+      "endMs": 26920,
+      "text": "Okay. So, four objections, three next steps, one read on intent."
+    },
+    {
+      "id": "seg-8",
+      "index": 8,
+      "speaker": "Prospect",
+      "startMs": 27440,
+      "endMs": 32840,
+      "text": "Hm. Second one down. That's — yeah, that's almost word for word what he said."
+    },
+    {
+      "id": "seg-9",
+      "index": 9,
+      "speaker": "Rep",
+      "startMs": 33360,
+      "endMs": 34260,
+      "text": "Click it."
+    },
+    {
+      "id": "seg-10",
+      "index": 10,
+      "speaker": "Prospect",
+      "startMs": 34440,
+      "endMs": 36960,
+      "text": "Oh. Right, it jumps to the line."
+    },
+    {
+      "id": "seg-11",
+      "index": 11,
+      "speaker": "Rep",
+      "startMs": 37480,
+      "endMs": 43960,
+      "text": "Every claim does that. There isn't a line in there that isn't attached to something someone actually said."
+    },
+    {
+      "id": "seg-12",
+      "index": 12,
+      "speaker": "Prospect",
+      "startMs": 44480,
+      "endMs": 46280,
+      "text": "And when it's not sure?"
+    },
+    {
+      "id": "seg-13",
+      "index": 13,
+      "speaker": "Rep",
+      "startMs": 46800,
+      "endMs": 52560,
+      "text": "It drops it. And it tells you it dropped it, there's a count at the top."
+    },
+    {
+      "id": "seg-14",
+      "index": 14,
+      "speaker": "Prospect",
+      "startMs": 53080,
+      "endMs": 55240,
+      "text": "So it'd rather show me less."
+    },
+    {
+      "id": "seg-15",
+      "index": 15,
+      "speaker": "Rep",
+      "startMs": 55760,
+      "endMs": 62240,
+      "text": "Always. Because the alternative is you find one wrong thing and then you don't trust any of it."
+    },
+    {
+      "id": "seg-16",
+      "index": 16,
+      "speaker": "Prospect",
+      "startMs": 62760,
+      "endMs": 68160,
+      "text": "Which is exactly what happened to us. One bad summary and the team was done."
+    },
+    {
+      "id": "seg-17",
+      "index": 17,
+      "speaker": "Rep",
+      "startMs": 68680,
+      "endMs": 71560,
+      "text": "So — anything in there you'd argue with?"
+    },
+    {
+      "id": "seg-18",
+      "index": 18,
+      "speaker": "Prospect",
+      "startMs": 72080,
+      "endMs": 73520,
+      "text": "Give me a sec."
+    },
+    {
+      "id": "seg-19",
+      "index": 19,
+      "speaker": "Rep",
+      "startMs": 73700,
+      "endMs": 74780,
+      "text": "Take your time."
+    },
+    {
+      "id": "seg-20",
+      "index": 20,
+      "speaker": "Prospect",
+      "startMs": 74960,
+      "endMs": 80360,
+      "text": "No. No, actually. And it's got the procurement freeze thing, which I'd completely forgotten about."
+    },
+    {
+      "id": "seg-21",
+      "index": 21,
+      "speaker": "Rep",
+      "startMs": 80880,
+      "endMs": 84120,
+      "text": "That one's about thirty minutes in, it's quite buried."
+    },
+    {
+      "id": "seg-22",
+      "index": 22,
+      "speaker": "Prospect",
+      "startMs": 84640,
+      "endMs": 88600,
+      "text": "That's genuinely useful. That would've cost me a call to find."
+    },
+    {
+      "id": "seg-23",
+      "index": 23,
+      "speaker": "Rep",
+      "startMs": 89120,
+      "endMs": 92000,
+      "text": "So what would stop you rolling this out?"
+    },
+    {
+      "id": "seg-24",
+      "index": 24,
+      "speaker": "Prospect",
+      "startMs": 92520,
+      "endMs": 100440,
+      "text": "Two things. It's got to land in the CRM. My reps aren't going to go looking for another tab, they just won't."
+    },
+    {
+      "id": "seg-25",
+      "index": 25,
+      "speaker": "Rep",
+      "startMs": 100960,
+      "endMs": 108880,
+      "text": "Yeah. That's the second most common thing we hear, after trust. The HubSpot push is on the roadmap, it isn't built yet."
+    },
+    {
+      "id": "seg-26",
+      "index": 26,
+      "speaker": "Prospect",
+      "startMs": 109400,
+      "endMs": 115160,
+      "text": "Mm. That's a real gap for us. It's not a no, but I'd want a date."
+    },
+    {
+      "id": "seg-27",
+      "index": 27,
+      "speaker": "Rep",
+      "startMs": 115680,
+      "endMs": 120720,
+      "text": "That's fair. I'd rather come back with a date than make one up now."
+    },
+    {
+      "id": "seg-28",
+      "index": 28,
+      "speaker": "Prospect",
+      "startMs": 121240,
+      "endMs": 126280,
+      "text": "And the other thing's the number, obviously. I did look at the pricing page."
+    },
+    {
+      "id": "seg-29",
+      "index": 29,
+      "speaker": "Rep",
+      "startMs": 126800,
+      "endMs": 133640,
+      "text": "Yeah, I'd rather do that properly with the numbers in front of us than dodge it on a call."
+    },
+    {
+      "id": "seg-30",
+      "index": 30,
+      "speaker": "Prospect",
+      "startMs": 134160,
+      "endMs": 137040,
+      "text": "Alright. Then let's get Dave from finance on."
+    },
+    {
+      "id": "seg-31",
+      "index": 31,
+      "speaker": "Rep",
+      "startMs": 137560,
+      "endMs": 141520,
+      "text": "That's the right next step. What does he need to see?"
+    },
+    {
+      "id": "seg-32",
+      "index": 32,
+      "speaker": "Prospect",
+      "startMs": 142040,
+      "endMs": 151400,
+      "text": "What we stop paying for, and what the reps get back in time. And it needs to be one page, he won't read past page one."
+    },
+    {
+      "id": "seg-33",
+      "index": 33,
+      "speaker": "Rep",
+      "startMs": 151920,
+      "endMs": 153360,
+      "text": "One page. When suits?"
+    },
+    {
+      "id": "seg-34",
+      "index": 34,
+      "speaker": "Prospect",
+      "startMs": 153540,
+      "endMs": 157500,
+      "text": "Thursday or Friday, I'll check his calendar and send an invite."
+    },
+    {
+      "id": "seg-35",
+      "index": 35,
+      "speaker": "Rep",
+      "startMs": 158020,
+      "endMs": 160540,
+      "text": "I'll have the page ready either way."
+    }
+  ]
+}

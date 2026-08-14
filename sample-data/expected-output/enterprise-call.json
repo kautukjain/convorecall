@@ -1,0 +1,20 @@
+{
+  "callId": "enterprise-call",
+  "exitStatus": "shipped",
+  "summary": "Introductory conversation covering evaluation and pricing concerns.",
+  "objections": [
+    {
+      "claim": "Prospect raised pricing concern",
+      "quote": "worried about price",
+      "segmentIds": [
+        "seg-2"
+      ]
+    }
+  ],
+  "intent": "Evaluating vendors",
+  "nextSteps": [
+    "Send pricing one-pager",
+    "Schedule technical deep-dive"
+  ],
+  "followUpEmail": "Hi — thanks for the conversation. Sharing a one-pager on pricing and proposing times for a technical deep-dive."
+}

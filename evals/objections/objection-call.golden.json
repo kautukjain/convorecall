@@ -1,0 +1,91 @@
+{
+  "callName": "objection-call",
+  "transcript": "sample-data/transcripts/objection-call.json",
+  "section": "objections",
+  "authored": {
+    "by": "human",
+    "at": "2026-08-10"
+  },
+  "notes": "Ground truth for ADR-015. Hand-authored against the transcript, not generated. Negative cases are the point: each is a plausible statement that was never made, and any of them appearing in output fails the eval outright.",
+  "positive": [
+    {
+      "id": "obj-pricing",
+      "claim": "Prospect cannot justify the proposed pricing at their current budget.",
+      "quote": "We're not sure we can justify that pricing right now.",
+      "segmentId": "seg-14",
+      "speaker": "Prospect",
+      "required": true
+    },
+    {
+      "id": "obj-budget-owner",
+      "claim": "Budget approval sits with Dave in finance, not with the prospect.",
+      "quote": "we'd need buy-in from finance, and Dave owns that",
+      "segmentId": "seg-16",
+      "speaker": "Prospect",
+      "required": true
+    },
+    {
+      "id": "obj-spend-jump",
+      "claim": "The proposed cost is more than three times their entire sales stack spend last year.",
+      "quote": "We spent about twelve on the whole sales stack last year.",
+      "segmentId": "seg-12",
+      "speaker": "Prospect",
+      "required": true
+    },
+    {
+      "id": "obj-prior-tool-distrust",
+      "claim": "The team distrusts AI-generated summaries after a prior tool produced claims the calls did not support.",
+      "quote": "Reps didn't trust the summaries.",
+      "segmentId": "seg-26",
+      "speaker": "Prospect",
+      "required": false,
+      "why": "Requires connecting the distrust to the adoption drop two turns earlier. A competent extractor may quote only the adoption number instead."
+    },
+    {
+      "id": "obj-security-review",
+      "claim": "A security review is required, though the prospect says it does not block the budget decision.",
+      "quote": "Security review, eventually. But that's not a blocker for the budget conversation",
+      "segmentId": "seg-38",
+      "speaker": "Prospect",
+      "required": false,
+      "why": "Borderline: raised as a future step rather than an objection. Counted if found, not penalised if omitted."
+    }
+  ],
+  "negative": [
+    {
+      "id": "neg-procurement",
+      "claim": "Prospect needs procurement approval before purchasing.",
+      "why": "Finance and Dave are named. Procurement is never mentioned. Common drift because the two co-occur in most enterprise deals."
+    },
+    {
+      "id": "neg-discount-request",
+      "claim": "Prospect asked for a twenty percent discount.",
+      "why": "No discount is requested or discussed anywhere in the call. Pure invention from the presence of a pricing objection."
+    },
+    {
+      "id": "neg-competitor-gong",
+      "claim": "Prospect is also evaluating Gong.",
+      "why": "Chorus is named as the incumbent. Gong is never mentioned. Tests whether the extractor imports domain knowledge over transcript content."
+    },
+    {
+      "id": "neg-month-end-deadline",
+      "claim": "A decision must be made by the end of the month.",
+      "why": "A Thursday budget review and a Wednesday send date are stated. No month-end deadline exists. Tests fabricated urgency."
+    },
+    {
+      "id": "neg-champion-commitment",
+      "claim": "Prospect committed to championing the purchase internally.",
+      "why": "He agreed to forward an email because a vendor email would be ignored. Forwarding is not championing. The subtlest case here and the most likely to slip through."
+    },
+    {
+      "id": "neg-coaching-requirement",
+      "claim": "Prospect requires coaching features as part of the deal.",
+      "why": "Coaching is mentioned only as unused shelfware in the incumbent tool. Reverses the meaning of the one time it comes up."
+    }
+  ],
+  "expected": {
+    "minRequiredFound": 3,
+    "hallucinationRate": 0,
+    "claimPrecision": 0.95
+  }
+}
