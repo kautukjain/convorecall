@@ -1,8 +1,12 @@
 <p align="center">
-  <img src="assets/logo/mark.svg" alt="ConvoRecall" width="72" />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="apps/web/public/logo/convorecall-dark.svg"
+    />
+    <img src="apps/web/public/logo/convorecall-on-light.svg" alt="ConvoRecall" width="380" />
+  </picture>
 </p>
-
-<h1 align="center">ConvoRecall</h1>
 
 <p align="center">
   <strong>What was said. What backs it up. What’s next.</strong>
@@ -427,6 +431,7 @@ Never commit `.env`. Never paste keys into issues or PRs.
 .
 ├── apps/
 │   ├── web/                 # Next.js UI — start, call view, share
+│   │   └── public/logo/     # Product lockup, one file per theme (also used by this README)
 │   └── api/                 # NestJS API + in-process worker
 │       ├── prisma/          # schema + migrations
 │       └── scripts/         # record-extraction, compare-sources
@@ -448,7 +453,7 @@ Never commit `.env`. Never paste keys into issues or PRs.
 ├── evals/ · benchmarks/     # Quality & performance
 ├── tools/                   # Benchmark / load-test helpers
 ├── scripts/                 # setup, seed, eval, clean, release, build-sample-audio
-├── assets/logo/             # Product mark
+├── assets/icons/            # App-icon source; app/icon.png is generated from it
 ├── assets/screenshots/      # README visuals
 ├── .data/                   # Runtime only, gitignored: uploads/ and recap-cache/
 ├── CONTRIBUTING.md

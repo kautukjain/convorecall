@@ -260,6 +260,45 @@ h3 {
   box-shadow: inset 2px 0 0 var(--brand);
 }
 
+/*
+ * Theme-swapped artwork.
+ *
+ * Every colour in this file is declared once through `light-dark()`, which reads
+ * `color-scheme` and needs no media query. A *file* cannot do that — there is no
+ * `light-dark(url(…), url(…))` — so the logo is the one place that has to restate the three
+ * states by hand: system default, system dark, and an explicit choice either way.
+ *
+ * Order matters. Light ships as the bare default so a browser that reports nothing still
+ * gets a readable mark; dark is layered on under `prefers-color-scheme` but guarded against
+ * an explicit `light`; then `[data-theme]` wins outright in both directions, because the
+ * toggle must beat the operating system.
+ */
+.art-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .art-light {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .art-dark {
+    display: block;
+  }
+}
+
+:root[data-theme="dark"] .art-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .art-dark {
+  display: block;
+}
+
+:root[data-theme="light"] .art-light {
+  display: block;
+}
+
 /* Loading is continuous rather than an animation with an end, so it breathes slowly. */
 @keyframes skeleton-pulse {
   50% {

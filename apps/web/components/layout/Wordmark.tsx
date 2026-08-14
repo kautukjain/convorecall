@@ -1,48 +1,58 @@
-/**
- * The mark: three bars of a waveform, then a tick. The call, then the receipt — which is
- * the entire product in four strokes.
- *
- * Drawn in `currentColor` rather than the icon's own palette so it inherits pine in the
- * header and ink wherever it needs to sit quietly. `app/icon.svg` is the same drawing on
- * a fixed dark tile, because a favicon cannot inherit anything.
- */
-export function Mark({ size = 18 }: { size?: number }) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      width={size}
-      height={size}
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-      focusable="false"
-    >
-      <g strokeWidth={2.6}>
-        <line x1="4" y1="13" x2="4" y2="19" />
-        <line x1="9.5" y1="8.5" x2="9.5" y2="23.5" />
-        <line x1="15" y1="12" x2="15" y2="20" />
-      </g>
-      <path d="M19.5 16.5l3.2 3.2 6.3-6.9" strokeWidth={2.8} />
-    </svg>
-  );
-}
+/** Intrinsic size of both logo files (`viewBox="40 250 1590 400"`), which fixes the aspect ratio. */
+const LOGO = { width: 1590, height: 400 } as const;
 
 /**
- * Mark plus name. The name is set in the display serif at a small size, which is where a
- * serif earns its keep — it reads as a masthead rather than as a logo built from the same
- * font as the interface around it.
+ * The supplied lockup, one file per theme.
+ *
+ * This replaced a hand-drawn waveform mark plus the product name set in the display serif. The
+ * letterforms are paths inside the artwork now, so there is no live text here at all — which is
+ * why both images carry an `alt`. The old hand-drawn mark is archived at
+ * `assets/icons/legacy-mark.svg`; the favicon is now `app/icon.png`, generated from the supplied
+ * icon (see `assets/icons/README.md`).
+ *
+ * Two `<img>` rather than one inline `<svg>`: the files are ~136 KB each of auto-traced paths, and
+ * inlining either would put that in the HTML of every page. As files they are fetched once and
+ * cached. The unused variant is `display: none` — fetched but idle, which is the price of getting
+ * the right mark on first paint instead of swapping `src` on the client and flashing the wrong one.
+ *
+ * **Shown whole. Do not try to crop the tagline off.**
+ *
+ * The artwork is a full lockup: mark, name, and "What was said. What backs it up. What's next."
+ * underneath. At the ~22px a 56px header allows, that tagline renders about four pixels tall, so
+ * cropping it is tempting. It does not work, and the geometry says why — measured from the real path
+ * bounding boxes inside `viewBox="40 250 1590 400"`:
+ *
+ *     mark (left)          y 265 – 643   ← spans essentially the full height
+ *     name + tagline       y 350 – 597
+ *
+ * The mark is taller than the text it sits beside, so every horizontal cut that removes the tagline
+ * also slices the bottom off the mark. An earlier version of this file cropped at y 515 with
+ * `object-cover object-top` and did exactly that. The measurement behind it was wrong: it clustered
+ * `translate(x, y)` origins, which are where each path starts, not the box it occupies — and this
+ * artwork's path data carries large negative offsets, so the origin says nothing about the extent.
+ *
+ * Removing the tagline needs a wordmark-only export from the designer, not CSS.
+ *
+ * Height is fixed and width follows the intrinsic ratio, so the header's row does not reflow when the
+ * images land.
  */
 export function Wordmark() {
   return (
-    <span className="inline-flex items-baseline gap-2">
-      <span className="translate-y-[0.1875rem] text-brand">
-        <Mark size={17} />
-      </span>
-      <span className="font-serif text-[0.9375rem] font-medium tracking-[-0.01em] text-fg">
-        Convo<span className="text-muted">Recall</span>
-      </span>
+    <span className="inline-flex items-center">
+      <img
+        src="/logo/convorecall-on-light.svg"
+        alt="ConvoRecall"
+        width={LOGO.width}
+        height={LOGO.height}
+        className="art-light h-6 w-auto"
+      />
+      <img
+        src="/logo/convorecall-dark.svg"
+        alt="ConvoRecall"
+        width={LOGO.width}
+        height={LOGO.height}
+        className="art-dark h-6 w-auto"
+      />
     </span>
   );
 }
