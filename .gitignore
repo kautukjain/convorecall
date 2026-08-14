@@ -1,36 +1,78 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+node_modules/
+.pnpm-store/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Build
+dist/
+build/
+.next/
+.turbo/
+out/
+coverage/
+*.tsbuildinfo
 
-# testing
-/coverage
+# Env & secrets
+.env
+.env.local
+.env.*.local
+!.env.example
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# Logs & OS
+*.log
+npm-debug.log*
 .DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Test / cache
+.cache/
+.tmp/
+tmp/
 *.pem
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Uploads / generated
+uploads/
+.generated/
 
-# local env files
-.env*.local
-.env
+# Agent tooling telemetry — local usage/cost data, not project content
+.claude/learning/
+.cursor/learning/
+.kiro/learning/
+.claude/mcp-usage.jsonl
+.claude/settings.local.json
+**/__pycache__/
+*.pyc
 
-# vercel
-.vercel
+# Local object storage (uploads)
+.data/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Scratch media dropped at the repo root while testing uploads. Anchored with a leading
+# slash on purpose: the demo audio in sample-data/audio/ is real project content and must
+# stay tracked. Left ~90 MB out of the first commit, including a 50 MB wav that GitHub
+# warns on.
+/*.mp3
+/*.wav
+/*.m4a
+/*.webm
+
+# Snapshot archives of the working tree. OpenGong_lite.zip was 192 MB — a single file over
+# GitHub's 100 MB hard limit, which fails the push rather than warning about it.
+/*.zip
+/*.tar
+/*.tar.gz
+/*.tgz
+
+
+.claude/
+.cursor/
+.kiro/
+.claude/mcp-usage.jsonl
+.claude/settings.local.json
+**/__pycache__/
+*.pyc
+node_modules/
