@@ -12,7 +12,7 @@ import { validateEnv } from "../src/config/env.js";
 
 /**
  * Records a real extraction for each sample call into `sample-data/extraction/`, so the
- * demo runs with no key and no network (see `docs/Ship-Blockers.md`, blocker 2).
+ * demo runs with no key and no network.
  *
  * Recording rather than authoring is the point. These claims and quotes are what the model
  * actually returned, so replaying them exercises the real gate. Hand-written recordings

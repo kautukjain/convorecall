@@ -9,7 +9,7 @@
 | Phase | Release-ready (unreleased) |
 | Status | All phases complete. Polish and release docs done. **Nothing is committed.** |
 | Last updated | 2026-08-13 |
-| Blockers | Four, audited against the ship checklist — see `docs/Ship-Blockers.md`. Extraction is live via OpenRouter (`google/gemma-4-31b-it`); the blockers are release and demo-setup gaps, not extraction. |
+| Extraction | Live via OpenRouter (`google/gemma-4-31b-it`). Remaining gaps are release and demo setup, not extraction. |
 
 ## Done
 
