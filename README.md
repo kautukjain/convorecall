@@ -13,8 +13,8 @@ Upload a sales call or meeting. Get a diarized transcript and deal notes where e
 
 
 | Start | Notes with receipts | Share |
-| ----- | ------------------- | ----- |
-| Start | Notes               | Share |
+|-------|---------------------|-------|
+| ![Start](assets/screenshots/01-start.png) | ![Notes](assets/screenshots/02-notes.png) | ![Share](assets/screenshots/03-share.png) |
 
 
 **Try it offline in under five minutes** (no API keys required for sample calls):
