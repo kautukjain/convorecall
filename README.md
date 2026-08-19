@@ -827,23 +827,23 @@ Good first areas: docs accuracy, harness/evidence tests, UI empty/error states, 
 ## Documentation
 
 
-| Doc                                        | Contents                                   |
-| ------------------------------------------ | ------------------------------------------ |
-| [Architecture](docs/Architecture.md)       | System map                                 |
-| [Decisions](docs/Decisions.md)             | ADRs                                       |
-| [Harness](docs/Harness.md)                 | Gates, retries, budgets                    |
-| [Jobs](docs/Jobs.md)                       | Queue, worker, SSE                         |
-| [Evidence-System](docs/Evidence-System.md) | Matching algorithm                         |
-| [API](docs/API.md)                         | HTTP contract                              |
-| [Database](docs/Database.md)               | Schema narrative                           |
-| [AI-Pipeline](docs/AI-Pipeline.md)         | STT → notes                                |
-| [Prompting](docs/Prompting.md)             | Versioned prompts                          |
-| [Deployment](docs/Deployment.md)           | Config & hosting notes                     |
-| [Evals](docs/Evals.md)                     | Quality measurement                        |
-| [Demo](docs/Demo.md)                       | ≤ 90s script                               |
-| [Screenshots](docs/Screenshots.md)         | How the README visuals are captured        |
-| [Roadmap](docs/Roadmap.md)                 | What’s next                                |
-| [PROJECT_STATE.md](PROJECT_STATE.md)       | Current phase                              |
+| Doc                                        | Contents                            |
+| ------------------------------------------ | ----------------------------------- |
+| [Architecture](docs/Architecture.md)       | System map                          |
+| [Decisions](docs/Decisions.md)             | ADRs                                |
+| [Harness](docs/Harness.md)                 | Gates, retries, budgets             |
+| [Jobs](docs/Jobs.md)                       | Queue, worker, SSE                  |
+| [Evidence-System](docs/Evidence-System.md) | Matching algorithm                  |
+| [API](docs/API.md)                         | HTTP contract                       |
+| [Database](docs/Database.md)               | Schema narrative                    |
+| [AI-Pipeline](docs/AI-Pipeline.md)         | STT → notes                         |
+| [Prompting](docs/Prompting.md)             | Versioned prompts                   |
+| [Deployment](docs/Deployment.md)           | Config & hosting notes              |
+| [Evals](docs/Evals.md)                     | Quality measurement                 |
+| [Demo](docs/Demo.md)                       | ≤ 90s script                        |
+| [Screenshots](docs/Screenshots.md)         | How the README visuals are captured |
+| [Roadmap](docs/Roadmap.md)                 | What’s next                         |
+| [PROJECT_STATE.md](PROJECT_STATE.md)       | Current phase                       |
 
 
 ---
@@ -858,8 +858,8 @@ Made with a lot of caffeine, Claude, Cursor, and zero respect for seat licenses
 by **The Hacksmiths**  
 **- [Ashith Prabhu](https://github.com/ashith-prabhu-saaslabs)**  
 **- [Kautuk Jain](https://github.com/kautukjain)**  
-- Nischal V Chadaga  
-- [Vishnuvardhan S](https://github.com/vishnusaaslabs)
+**- [Vishnuvardhan S](https://github.com/vishnusaaslabs)**
+- [Nischal V Chadaga]
 
 *We don’t wrap voice apps.*  
 *We give them away — and make every claim show its receipts.*
