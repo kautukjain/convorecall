@@ -20,6 +20,8 @@ export const PROBLEM_CODES = {
   internal_error: { status: 500, title: "Internal error" },
 } as const;
 
+const PROBLEM_TYPE_ORIGIN = "https://convorecall.dev";
+
 export type ProblemCode = keyof typeof PROBLEM_CODES;
 
 export type ProblemBody = {
@@ -51,7 +53,7 @@ export class ProblemException extends Error {
 
   toBody(): ProblemBody {
     return {
-      type: `https://opengong.dev/problems/${this.code.replace(/_/g, "-")}`,
+      type: `${PROBLEM_TYPE_ORIGIN}/problems/${this.code.replace(/_/g, "-")}`,
       title: PROBLEM_CODES[this.code].title,
       status: this.status,
       detail: this.detail,

@@ -7,7 +7,7 @@ import {
 } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import type { JobState, TranscriptSegment } from "@prisma/client";
-import type { CallNotes, JobExitStatus } from "@opengong/types";
+import type { CallNotes, JobExitStatus } from "@convorecall/types";
 import { ProblemException } from "../../common/problem.js";
 import { PrismaService } from "../../database/prisma.service.js";
 import { AiOrchestratorService } from "../ai/ai-orchestrator.service.js";
@@ -327,12 +327,16 @@ export class WorkerService implements OnApplicationBootstrap, OnModuleDestroy {
   /**
    * Picks where claims come from, in the order the product prefers them.
    *
-   * 1. **PyAI Recap**, when it can analyse this call. Its findings are quoted, so they pass the same
+   * 1. **A recorded extraction**, for a sample call (ADR-016). First rather than last: a recording
+   *    is real captured output for that exact transcript, so it produces the same notes on every
+   *    run, spends no Recap unit against the daily cap, and cannot be emptied by a provider
+   *    changing its response shape. `LIVE_EXTRACTION_FOR_FIXTURES=true` puts a sample call back on
+   *    the live path, which is what measuring a provider wants and what a demo does not.
+   * 2. **PyAI Recap**, when it can analyse this call. Its findings are quoted, so they pass the same
    *    evidence gate as anything else, and they cost no second vendor — the one-API path.
-   * 2. **Recap plus the model**, when `LLM_ENABLED=true`. Recap still wins any section it can
+   * 3. **Recap plus the model**, when `LLM_ENABLED=true`. Recap still wins any section it can
    *    evidence; the model fills what it cannot — next steps, intent without a buying signal, and
    *    the follow-up email.
-   * 3. **A recorded extraction**, for a sample call with no provider at all (ADR-016).
    * 4. **The model alone**, which is what `undefined` means to `NotesService`.
    *
    * Returning `undefined` is not failure — it means "use the live orchestrator". The caller treats
@@ -342,6 +346,31 @@ export class WorkerService implements OnApplicationBootstrap, OnModuleDestroy {
     job: ClaimedJob,
     segments: TranscriptSegment[],
   ): Promise<ExtractionSource | undefined> {
+    /*
+     * A sample call replays its recording before any provider is asked.
+     *
+     * This branch used to sit at the bottom, guarded on nothing else being configured, which made a
+     * recording unreachable the moment `PYAI_API_KEY` was set — a demo's notes then depended on what
+     * a vendor happened to return that day. Recap answered `support-call` and `demo-call` with a
+     * record carrying none of the quoted fields `RecapExtractionSource` reads, so all three
+     * evidenced sections came back empty, stage 2 was skipped for want of survivors, and the call
+     * exited `failed` with a complete recording sitting unused on disk.
+     */
+    if (
+      job.source === "FIXTURE" &&
+      job.sourceRef &&
+      this.config.get<boolean>("LIVE_EXTRACTION_FOR_FIXTURES") !== true
+    ) {
+      const replayed = await this.replay.load(job.sourceRef);
+      if (replayed) {
+        this.logger.log(
+          `Job ${job.id}: replaying the recorded extraction for ${job.sourceRef} ` +
+            `(LIVE_EXTRACTION_FOR_FIXTURES=true to use a live provider instead)`,
+        );
+        return replayed;
+      }
+    }
+
     const llmEnabled = this.config.get<boolean>("LLM_ENABLED") === true;
 
     /*
@@ -354,7 +383,7 @@ export class WorkerService implements OnApplicationBootstrap, OnModuleDestroy {
      */
     const recapKey =
       job.source === "FIXTURE" && job.sourceRef
-        ? `opengong-${job.sourceRef}`
+        ? `convorecall-${job.sourceRef}`
         : job.callId;
 
     /*

@@ -1,4 +1,4 @@
-import type { CallNotes, Evidence } from "@opengong/types";
+import type { CallNotes, Evidence } from "@convorecall/types";
 
 function timestamp(ms: number): string {
   const total = Math.floor(ms / 1000);
@@ -83,8 +83,10 @@ export function renderNotesMarkdown(notes: CallNotes): string {
   return lines.join("\n");
 }
 
+const EXPORT_FILENAME_PREFIX = "convorecall";
+
 /** Filenames end up in a Content-Disposition header and on the user's disk. */
 export function safeFilename(callId: string, extension: string): string {
   const safe = callId.replace(/[^a-zA-Z0-9-]/g, "").slice(0, 40) || "call";
-  return `opengong-${safe}.${extension}`;
+  return `${EXPORT_FILENAME_PREFIX}-${safe}.${extension}`;
 }

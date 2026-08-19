@@ -60,8 +60,6 @@ uploads/
 /*.m4a
 /*.webm
 
-# Snapshot archives of the working tree. OpenGong_lite.zip was 192 MB — a single file over
-# GitHub's 100 MB hard limit, which fails the push rather than warning about it.
 /*.zip
 /*.tar
 /*.tar.gz
@@ -78,3 +76,4 @@ uploads/
 node_modules/
 CLAUDE.md
 AGENTS.md
+docs/Ship-Blockers.md

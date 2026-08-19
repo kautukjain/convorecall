@@ -2,7 +2,7 @@ import type {
   EvidenceMatch,
   JobExitStatus,
   TranscriptSegment,
-} from "@opengong/types";
+} from "@convorecall/types";
 
 /**
  * Harness defaults. Source of truth is the config table in docs/Harness.md.

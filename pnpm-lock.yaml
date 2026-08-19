@@ -53,16 +53,16 @@ importers:
       '@nestjs/throttler':
         specifier: ^6.4.0
         version: 6.5.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.28)(reflect-metadata@0.2.2)
-      '@opengong/prompts':
+      '@convorecall/prompts':
         specifier: workspace:*
         version: link:../../packages/prompts
-      '@opengong/shared':
+      '@convorecall/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@opengong/types':
+      '@convorecall/types':
         specifier: workspace:*
         version: link:../../packages/types
-      '@opengong/validators':
+      '@convorecall/validators':
         specifier: workspace:*
         version: link:../../packages/validators
       '@prisma/client':
@@ -111,10 +111,10 @@ importers:
 
   apps/web:
     dependencies:
-      '@opengong/types':
+      '@convorecall/types':
         specifier: workspace:*
         version: link:../../packages/types
-      '@opengong/ui':
+      '@convorecall/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       lucide-react:
@@ -159,7 +159,7 @@ importers:
 
   packages/shared:
     dependencies:
-      '@opengong/types':
+      '@convorecall/types':
         specifier: workspace:*
         version: link:../types
     devDependencies:
@@ -203,10 +203,10 @@ importers:
 
   scripts:
     dependencies:
-      '@opengong/shared':
+      '@convorecall/shared':
         specifier: workspace:*
         version: link:../packages/shared
-      '@opengong/types':
+      '@convorecall/types':
         specifier: workspace:*
         version: link:../packages/types
 

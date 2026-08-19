@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { HARNESS_DEFAULTS, WORKER_DEFAULTS } from "@opengong/shared";
+import { HARNESS_DEFAULTS, WORKER_DEFAULTS } from "@convorecall/shared";
 
 /**
  * Startup fails if configuration is missing or malformed. Defaults come from the config
@@ -37,6 +37,21 @@ export const EnvSchema = z.object({
    * Off by default so a fresh clone is one-API unless it opts out.
    */
   LLM_ENABLED: z
+    .enum(["true", "false"])
+    .default("false")
+    .transform((value) => value === "true"),
+
+  /**
+   * Where a sample call's claims come from. Off means it replays the recorded extraction in
+   * `sample-data/extraction/` (ADR-016); on means it goes through Recap and the model like any
+   * uploaded call.
+   *
+   * Off by default because a recording is real captured output for that exact transcript: the demo
+   * produces the same notes every run, spends no Recap unit against the daily cap, and cannot be
+   * emptied by a provider changing its response shape. Turn it on to measure a live provider
+   * against a known transcript — `pnpm compare` does that directly and ignores this.
+   */
+  LIVE_EXTRACTION_FOR_FIXTURES: z
     .enum(["true", "false"])
     .default("false")
     .transform((value) => value === "true"),

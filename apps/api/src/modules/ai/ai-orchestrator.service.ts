@@ -12,9 +12,9 @@ import {
   renderTranscript,
   type DerivedSection,
   type EvidencedSection,
-} from "@opengong/prompts";
-import { ExtractedClaimsSchema, SpeakerNamesSchema } from "@opengong/validators";
-import type { ClaimCandidate } from "@opengong/types";
+} from "@convorecall/prompts";
+import { ExtractedClaimsSchema, SpeakerNamesSchema } from "@convorecall/validators";
+import type { ClaimCandidate } from "@convorecall/types";
 import { z } from "zod";
 import { LlmClient, type ChatMessage } from "./llm.client.js";
 

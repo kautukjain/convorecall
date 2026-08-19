@@ -1,4 +1,4 @@
-import type { UncitedNotes } from "@opengong/types";
+import type { UncitedNotes } from "@convorecall/types";
 
 /**
  * What the call settled, as Recap reports it.

@@ -1,9 +1,9 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it, vi } from "vitest";
-import { PROMPT_VERSION } from "@opengong/prompts";
-import type { TranscriptSegment } from "@opengong/types";
-import { CallNotesSchema } from "@opengong/validators";
+import { PROMPT_VERSION } from "@convorecall/prompts";
+import type { TranscriptSegment } from "@convorecall/types";
+import { CallNotesSchema } from "@convorecall/validators";
 import type { AiOrchestratorService } from "../ai/ai-orchestrator.service.js";
 import { EvidenceService } from "../evidence/evidence.service.js";
 import { NotesService } from "./notes.service.js";

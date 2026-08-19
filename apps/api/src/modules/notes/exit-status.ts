@@ -1,4 +1,4 @@
-import type { JobExitStatus } from "@opengong/types";
+import type { JobExitStatus } from "@convorecall/types";
 
 export const ALL_SECTIONS = [
   "summary",

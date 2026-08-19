@@ -1,6 +1,6 @@
 import { Link2Off } from "lucide-react";
 import type { Metadata } from "next";
-import type { Evidence } from "@opengong/types";
+import type { Evidence } from "@convorecall/types";
 import { API_URL } from "../../../lib/api";
 import { absoluteDate, timestamp } from "../../../lib/format";
 import { ExitBadge } from "../../../components/notes/ExitBadge";

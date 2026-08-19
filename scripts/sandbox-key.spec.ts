@@ -26,7 +26,7 @@ const MINTED = {
 };
 
 function envFile(contents: string): string {
-  const dir = mkdtempSync(resolve(tmpdir(), "opengong-env-"));
+  const dir = mkdtempSync(resolve(tmpdir(), "convorecall-env-"));
   const path = resolve(dir, ".env");
   writeFileSync(path, contents);
   return path;
@@ -128,7 +128,7 @@ describe("ensureSandboxKey", () => {
   });
 
   it("skips when there is no .env at all", async () => {
-    const outcome = await ensureSandboxKey(resolve(tmpdir(), "opengong-nope", ".env"));
+    const outcome = await ensureSandboxKey(resolve(tmpdir(), "convorecall-nope", ".env"));
     expect(outcome.status).toBe("skipped");
   });
 });

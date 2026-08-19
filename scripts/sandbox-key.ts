@@ -23,6 +23,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 
 const DEFAULT_BASE_URL = "https://api.pyai.com/v1";
 const ENV_KEY = "PYAI_API_KEY";
+const SANDBOX_KEY_LABEL = "convorecall";
 
 export type MintedKey = {
   apiKey: string;
@@ -69,7 +70,7 @@ export async function mintSandboxKey(
     const response = await fetchImpl(`${baseUrl.replace(/\/+$/, "")}/sandbox/keys`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ label: "opengong-lite" }),
+      body: JSON.stringify({ label: SANDBOX_KEY_LABEL }),
       signal: AbortSignal.timeout(15_000),
     });
 
@@ -100,7 +101,7 @@ export async function mintSandboxKey(
 const HINT =
   `Mint one by hand and paste it into .env as ${ENV_KEY}:\n` +
   `    curl -X POST ${DEFAULT_BASE_URL}/sandbox/keys \\\n` +
-  `      -H 'content-type: application/json' -d '{"label":"opengong-lite"}'\n` +
+  `      -H 'content-type: application/json' -d '{"label":"${SANDBOX_KEY_LABEL}"}'\n` +
   "  Speech-to-text needs it. The five sample calls do not — they ship written transcripts.";
 
 /**

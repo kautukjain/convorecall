@@ -44,7 +44,6 @@ secrets. Operator detail goes to `Job.lastError` and the logs, never to the clie
 | `duration_exceeded` | 422 |
 | `call_not_found` | 404 |
 | `transcript_not_ready` | 409 |
-| `audio_not_available` | 404 |
 | `notes_not_ready` | 409 |
 | `share_not_found` | 404 |
 | `share_expired` | 410 |
@@ -221,21 +220,6 @@ the sparse-notes section of `docs/Evidence-System.md`.
 ---
 
 ## Export
-
-### `GET /api/v1/calls/:id/audio`
-
-Streams the recording behind a call. Two sources, resolved in order: the stored object for an
-upload or a fetched URL, otherwise the checked-in sample in `sample-data/audio/` for a fixture
-call (ADR-012).
-
-Answers `Range` requests with `206 Partial Content`, which is what lets the player seek to a
-claim's timestamp instead of downloading the whole file first. `404 audio_not_available` when a
-call has neither a stored object nor a sample — an ordinary state, since a transcript can outlive
-its audio, and one the client must degrade around rather than treat as a failure.
-
-Served `cache-control: private, no-cache` with an ETag. Private because the URL is
-unauthenticated; revalidating rather than trusting an age because regenerated sample audio must
-not sit behind a stale copy.
 
 ### `GET /api/v1/calls/:id/export.md`
 

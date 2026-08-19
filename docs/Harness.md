@@ -1,6 +1,6 @@
 # Harness
 
-The harness is the part of ConvoRecall that decides what ships. Extractors propose;
+The harness is the part of OpenGong Lite that decides what ships. Extractors propose;
 the harness disposes. Everything in this document is normative — where another file
 disagrees, this one wins (ADR-004).
 

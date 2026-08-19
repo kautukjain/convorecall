@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { Logger, Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { NestFactory } from "@nestjs/core";
-import type { TranscriptSegment } from "@opengong/types";
+import type { TranscriptSegment } from "@convorecall/types";
 import { AiOrchestratorService } from "../src/modules/ai/ai-orchestrator.service.js";
 import type { ExtractionSource } from "../src/modules/ai/extraction-source.js";
 import { LlmClient } from "../src/modules/ai/llm.client.js";
@@ -124,7 +124,7 @@ async function main(): Promise<void> {
   for (const call of CALLS) {
     const segments = transcript(call);
     const utterances = RecapClient.toUtterances(segments);
-    const record = await recap.analyse(`opengong-${call}`, utterances).catch(() => null);
+    const record = await recap.analyse(`convorecall-${call}`, utterances).catch(() => null);
 
     if (record) {
       // The fixtures label our side `Rep`, so this is true for them — measuring with it hardcoded

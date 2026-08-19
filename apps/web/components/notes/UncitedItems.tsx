@@ -1,4 +1,4 @@
-import type { UncitedNotes } from "@opengong/types";
+import type { UncitedNotes } from "@convorecall/types";
 
 /**
  * Next steps that arrived without a quote, shown inside the Next steps section.

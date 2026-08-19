@@ -1,7 +1,7 @@
 "use client";
 
 import { CornerDownRight, TriangleAlert } from "lucide-react";
-import type { Evidence } from "@opengong/types";
+import type { Evidence } from "@convorecall/types";
 import { timestamp } from "../../lib/format";
 import { SpeakerAvatar } from "../ui/SpeakerChip";
 

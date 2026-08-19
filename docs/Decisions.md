@@ -1,6 +1,6 @@
 # Decisions
 
-Architecture Decision Records for ConvoRecall.
+Architecture Decision Records for OpenGong Lite.
 
 `docs/` is the normative source of truth for this project (see ADR-004). Where any
 other file disagrees with an accepted ADR, the ADR wins and the other file is a bug.
@@ -24,7 +24,6 @@ other file disagrees with an accepted ADR, the ADR wins and the other file is a 
 | 013 | Evidenced vs derived sections | Accepted | Phase 3 |
 | 014 | Web stack | Accepted | Phase 4 |
 | 015 | Evidence quality metric | Accepted | Phase 3 exit |
-| 016 | Recorded extraction for the offline demo | Accepted | Zero-setup demo |
 
 ---
 

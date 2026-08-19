@@ -1,5 +1,5 @@
 import { BadgeCheck, CircleSlash, Timer, TriangleAlert } from "lucide-react";
-import type { JobExitStatus } from "@opengong/types";
+import type { JobExitStatus } from "@convorecall/types";
 
 /**
  * `partial` is the expected common case on real audio (ADR-011). Styling it as a warning

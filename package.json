@@ -1,5 +1,5 @@
 {
-  "name": "opengong-lite-hackathon-kit",
+  "name": "convorecall",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -16,7 +16,7 @@
     "typecheck": "turbo run typecheck",
     "test": "vitest run",
     "test:watch": "vitest",
-    "db:up": "docker compose -f infra/compose/docker-compose.yml up -d",
+    "db:up": "docker compose -f infra/compose/docker-compose.yml up -d --wait",
     "db:down": "docker compose -f infra/compose/docker-compose.yml down",
     "clean": "tsx scripts/clean.ts",
     "setup": "tsx scripts/setup.ts",
@@ -25,9 +25,9 @@
     "db:migrate": "prisma migrate deploy --schema apps/api/prisma/schema.prisma",
     "db:generate": "prisma generate --schema apps/api/prisma/schema.prisma",
     "eval": "tsx scripts/eval.ts",
-    "record": "pnpm --filter @opengong/api record",
+    "record": "pnpm --filter @convorecall/api record",
     "build:audio": "tsx scripts/build-sample-audio.ts",
-    "compare": "pnpm --filter @opengong/api compare"
+    "compare": "pnpm --filter @convorecall/api compare"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.0",

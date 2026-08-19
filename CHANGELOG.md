@@ -43,5 +43,5 @@ notes where every claim is quoted → export and share.
 - `demo-call` and `support-call` have no transcript and are disabled in the UI.
 - Long-transcript chunking is not implemented; cap demo calls at roughly 15 minutes.
 
-[unreleased]: https://github.com/OWNER/opengong-lite/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/OWNER/opengong-lite/releases/tag/v0.1.0
+[unreleased]: https://github.com/OWNER/convorecall/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/OWNER/convorecall/releases/tag/v0.1.0

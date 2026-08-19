@@ -1,7 +1,7 @@
 import { randomBytes } from "node:crypto";
 import { Injectable, Logger } from "@nestjs/common";
-import { CallNotesSchema } from "@opengong/validators";
-import type { CallNotes } from "@opengong/types";
+import { CallNotesSchema } from "@convorecall/validators";
+import type { CallNotes } from "@convorecall/types";
 import { ProblemException } from "../../common/problem.js";
 import { PrismaService } from "../../database/prisma.service.js";
 

@@ -19,7 +19,7 @@ async function bootstrap(): Promise<void> {
     // The exports are downloaded by `fetch` from the web origin, and CORS hides every
     // non-simple response header from JavaScript by default. Without this the browser can
     // read the file but not the filename the API chose for it, so a download lands as a
-    // raw UUID instead of `opengong-<call>.md`.
+    // raw UUID instead of `convorecall-<call>.md`.
     exposedHeaders: ["content-disposition"],
   });
   // Every error leaves as problem+json, including ones we did not anticipate.

@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
-import type { TranscriptSegment } from "@opengong/types";
+import type { TranscriptSegment } from "@convorecall/types";
 import {
   buildTranscriptIndex,
   normalizeForMatch,

@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import type { Notes, NotesExitStatus, Prisma } from "@prisma/client";
-import type { CallNotes } from "@opengong/types";
+import type { CallNotes } from "@convorecall/types";
 import { PrismaService } from "../../database/prisma.service.js";
 
 @Injectable()

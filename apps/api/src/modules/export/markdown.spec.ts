@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { CallNotes, Evidence } from "@opengong/types";
+import type { CallNotes, Evidence } from "@convorecall/types";
 import { renderNotesMarkdown, safeFilename } from "./markdown.js";
 
 const evidence = (over: Partial<Evidence> = {}): Evidence => ({
@@ -79,8 +79,8 @@ describe("renderNotesMarkdown", () => {
 
 describe("safeFilename", () => {
   it("strips anything that is not id-safe", () => {
-    expect(safeFilename("abc-123", "md")).toBe("opengong-abc-123.md");
-    expect(safeFilename('../../etc/passwd"', "json")).toBe("opengong-etcpasswd.json");
-    expect(safeFilename("", "md")).toBe("opengong-call.md");
+    expect(safeFilename("abc-123", "md")).toBe("convorecall-abc-123.md");
+    expect(safeFilename('../../etc/passwd"', "json")).toBe("convorecall-etcpasswd.json");
+    expect(safeFilename("", "md")).toBe("convorecall-call.md");
   });
 });

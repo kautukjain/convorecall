@@ -1,5 +1,5 @@
 import { Injectable, Logger } from "@nestjs/common";
-import { normalizeForMatch, resolveQuoteInSegments } from "@opengong/shared";
+import { normalizeForMatch, resolveQuoteInSegments } from "@convorecall/shared";
 
 /** Structural minimum the matcher needs; both Prisma rows and shared types satisfy it. */
 type Segment = {

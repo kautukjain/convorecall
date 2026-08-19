@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { Evidence } from "@opengong/types";
+import type { Evidence } from "@convorecall/types";
 import { composeEmail, deriveRecipient, isPersonName } from "./recipient.js";
 
 function evidence(speaker: string, claim = "a claim"): Evidence {

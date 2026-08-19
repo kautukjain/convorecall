@@ -2,7 +2,7 @@
 
 import { FileText, TriangleAlert } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { CallNotes, Evidence } from "@opengong/types";
+import type { CallNotes, Evidence } from "@convorecall/types";
 import {
   ApiError,
   api,

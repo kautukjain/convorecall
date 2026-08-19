@@ -68,44 +68,6 @@ Two guarantees in `scripts/sandbox-key.ts`, both covered by tests:
 
 The key is written to `.env` and never printed, not even truncated.
 
-### The extraction endpoint cannot be minted
-
-Speech and text are provisioned differently, and `pnpm setup` reflects that rather than papering
-over it.
-
-PyAI mints a sandbox key with no account, so setup finishes speech unattended. **No
-OpenAI-compatible text provider does the same** — OpenRouter, OpenAI and the rest all require a
-signed-up account before a key exists, so there is nothing a script can call. That is a property
-of the providers, not a gap in the setup script.
-
-It does not block a fresh clone, because extraction is not needed to see the product: the five
-sample calls replay a recorded extraction through the real evidence gate (ADR-016). A key is
-needed only to analyse audio of your own.
-
-Setup therefore does three things, in order:
-
-1. If `LLM_BASE_URL` and `LLM_API_KEY` are already set, it reports the host and model and changes
-   nothing.
-2. Otherwise it probes for a local OpenAI-compatible runner — Ollama on `:11434`, LM Studio on
-   `:1234` — and points extraction at it if one is serving a model. **This is the only keyless
-   path to real extraction**, and it needs no account, no card, and no network.
-3. Otherwise it says extraction is unconfigured, says the sample calls do not need it, and prints
-   what to set.
-
-A runner that is up but holds no model is not treated as a hit; it could not serve extraction.
-
-**Verified end to end against a local OpenAI-compatible endpoint** (2026-08-13): with
-`LLM_BASE_URL=http://localhost:11434/v1`, `LLM_API_KEY=local`, the harness shipped notes whose
-quotes resolved to real segments through the ordinary evidence gate, and `notes.metadata.llmModel`
-recorded the local model id. No part of the pipeline needs a hosted provider.
-
-One caveat that is about model quality rather than configuration. The evidence gate accepts a claim
-only if its quote resolves at `EVIDENCE_MATCH_THRESHOLD` (0.85), and smaller local models paraphrase
-more than large ones. A weaker model therefore tends to lose claims to the gate rather than emit
-wrong ones — sparse notes, not false notes, which is the failure direction ADR-002 chose on purpose.
-If a local model produces empty sections, that is the gate working; reach for a stronger model rather
-than a lower threshold, because the threshold is the product.
-
 ## Production
 
 Nothing here is ready for a shared deployment. There is no authentication, no retention

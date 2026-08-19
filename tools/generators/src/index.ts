@@ -18,7 +18,7 @@ import { join, resolve } from "node:path";
  * Voices are declared per speaker in the fixture. Positional assignment cannot know that
  * a speaker addressed as "Priya" needs a female voice — that mismatch shipped once.
  *
- *   pnpm --filter @opengong/generators start -- objection-call
+ *   pnpm --filter @convorecall/generators start -- objection-call
  */
 
 const ROOT = resolve(import.meta.dirname, "../../..");
@@ -105,7 +105,7 @@ async function render(callName: string): Promise<void> {
     `${callName}: ${speakers.map((s) => `${s}=${voices[s]}`).join(", ")}`,
   );
 
-  const work = mkdtempSync(join(tmpdir(), "opengong-audio-"));
+  const work = mkdtempSync(join(tmpdir(), "convorecall-audio-"));
   try {
     const parts: string[] = [];
 

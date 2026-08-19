@@ -2,6 +2,8 @@ import { Controller, Get } from "@nestjs/common";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { SkipThrottle } from "@nestjs/throttler";
 
+const HEALTH_SERVICE_NAME = "convorecall-api";
+
 export type HealthResponse = {
   ok: true;
   service: string;
@@ -21,7 +23,7 @@ export class HealthController {
   check(): HealthResponse {
     return {
       ok: true,
-      service: "opengong-api",
+      service: HEALTH_SERVICE_NAME,
       version: process.env.npm_package_version ?? "0.1.0",
     };
   }

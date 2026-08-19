@@ -4,12 +4,12 @@ import {
   HARNESS_DEFAULTS,
   buildTranscriptIndex,
   resolveQuote,
-} from "@opengong/shared";
+} from "@convorecall/shared";
 import type {
   ClaimCandidate,
   Evidence,
   TranscriptSegment,
-} from "@opengong/types";
+} from "@convorecall/types";
 
 export type GateResult = {
   kept: Evidence[];

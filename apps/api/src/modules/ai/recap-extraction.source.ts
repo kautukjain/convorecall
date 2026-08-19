@@ -1,5 +1,5 @@
-import type { DerivedSection, EvidencedSection } from "@opengong/prompts";
-import type { ClaimCandidate, UncitedNotes } from "@opengong/types";
+import type { DerivedSection, EvidencedSection } from "@convorecall/prompts";
+import type { ClaimCandidate, UncitedNotes } from "@convorecall/types";
 import type { SectionOutcome } from "./ai-orchestrator.service.js";
 import type { ExtractionSource } from "./extraction-source.js";
 import type { RecapQuoted, RecapRecord } from "./recap.client.js";

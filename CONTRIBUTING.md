@@ -11,6 +11,15 @@ pnpm setup
 pnpm seed
 pnpm dev
 ```
+OR
+
+```bash
+pnpm install
+cp .env.example .env
+pnpm run setup
+pnpm seed
+pnpm dev
+```
 
 ## Workflow
 

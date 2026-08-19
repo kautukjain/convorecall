@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { Injectable, Logger } from "@nestjs/common";
-import { TranscriptSchema } from "@opengong/validators";
+import { TranscriptSchema } from "@convorecall/validators";
 import { ProblemException } from "../../../common/problem.js";
 import type { SttResult } from "../stt.types.js";
 

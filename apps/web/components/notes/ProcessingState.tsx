@@ -1,5 +1,5 @@
 import { Check, Loader2 } from "lucide-react";
-import type { JobStatus } from "@opengong/types";
+import type { JobStatus } from "@convorecall/types";
 import { Panel, PanelHeader } from "../ui/Panel";
 import { SectionLabel } from "../ui/SectionLabel";
 import { SkeletonEvidence, SkeletonText, SkeletonTranscript } from "../ui/Skeleton";

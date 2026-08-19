@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type { TranscriptSegment } from "@opengong/types";
+import type { TranscriptSegment } from "@convorecall/types";
 import { timestamp } from "../../lib/format";
 import { SpeakerAvatar } from "../ui/SpeakerChip";
 

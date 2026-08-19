@@ -45,7 +45,7 @@ function waitForPostgres(): boolean {
     try {
       execFileSync(
         "docker",
-        ["exec", "opengong-postgres", "pg_isready", "-U", "opengong", "-d", "opengong"],
+        ["exec", "convorecall-postgres", "pg_isready", "-U", "convorecall", "-d", "convorecall"],
         { stdio: "ignore" },
       );
       return true;
@@ -76,7 +76,7 @@ async function main(): Promise<void> {
   const hasDocker = run("docker", ["--version"]);
   if (!hasDocker) {
     console.log("• Docker not found — skipping database. Start Postgres yourself and");
-    console.log("  set DATABASE_URL, then run: pnpm --filter @opengong/api prisma:migrate");
+    console.log("  set DATABASE_URL, then run: pnpm --filter @convorecall/api prisma:migrate");
     return;
   }
 // Client generation does not need a live DB. Always run it so `pnpm dev` can import
@@ -87,7 +87,7 @@ async function main(): Promise<void> {
     process.exit(1);
   }
   console.log("• Starting Postgres…");
-  if (!run("docker", ["compose", "-f", composeFile, "up", "-d"])) {
+  if (!run("docker", ["compose", "-f", composeFile, "up", "-d", "--wait"])) {
     console.error("  Failed to start Postgres. Is Docker running?");
     process.exit(1);
   }
@@ -99,7 +99,7 @@ async function main(): Promise<void> {
   console.log("• Postgres ready on localhost:5433.");
 
   console.log("• Applying migrations…");
-  if (!run("pnpm", ["--filter", "@opengong/api", "exec", "prisma", "migrate", "deploy"])) {
+  if (!run("pnpm", ["--filter", "@convorecall/api", "exec", "prisma", "migrate", "deploy"])) {
     console.error("  Migration failed. Check DATABASE_URL in .env.");
     process.exit(1);
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@opengong/shared",
+  "name": "@convorecall/shared",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -16,7 +16,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@opengong/types": "workspace:*"
+    "@convorecall/types": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",

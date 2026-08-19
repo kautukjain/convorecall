@@ -1,8 +1,8 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { Injectable, Logger } from "@nestjs/common";
-import type { DerivedSection, EvidencedSection } from "@opengong/prompts";
-import { RecordedExtractionSchema } from "@opengong/validators";
+import type { DerivedSection, EvidencedSection } from "@convorecall/prompts";
+import { RecordedExtractionSchema } from "@convorecall/validators";
 import type { SectionOutcome } from "./ai-orchestrator.service.js";
 import type { ExtractionSource } from "./extraction-source.js";
 

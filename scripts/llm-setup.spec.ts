@@ -15,7 +15,7 @@ const BLANK = [
 ].join("\n");
 
 function envFile(contents: string): string {
-  const path = resolve(mkdtempSync(resolve(tmpdir(), "opengong-llm-")), ".env");
+  const path = resolve(mkdtempSync(resolve(tmpdir(), "convorecall-llm-")), ".env");
   writeFileSync(path, contents);
   return path;
 }

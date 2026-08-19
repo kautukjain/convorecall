@@ -1,7 +1,7 @@
 import { Controller, Get, Header, Param, Res } from "@nestjs/common";
 import type { Response } from "express";
-import { CallNotesSchema } from "@opengong/validators";
-import type { CallNotes } from "@opengong/types";
+import { CallNotesSchema } from "@convorecall/validators";
+import type { CallNotes } from "@convorecall/types";
 import { ApiOperation, ApiTags } from "@nestjs/swagger";
 import { ProblemException } from "../../common/problem.js";
 import { CallIdParamSchema } from "../calls/dto/create-call.dto.js";

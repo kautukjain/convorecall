@@ -1,13 +1,13 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
-import { PROMPT_VERSION, type EvidencedSection } from "@opengong/prompts";
+import { PROMPT_VERSION, type EvidencedSection } from "@convorecall/prompts";
 import type {
   CallNotes,
   Evidence,
   JobExitStatus,
   TranscriptSegment,
   UncitedNotes,
-} from "@opengong/types";
+} from "@convorecall/types";
 import { AiOrchestratorService } from "../ai/ai-orchestrator.service.js";
 import type { ExtractionSource } from "../ai/extraction-source.js";
 import { EvidenceService } from "../evidence/evidence.service.js";

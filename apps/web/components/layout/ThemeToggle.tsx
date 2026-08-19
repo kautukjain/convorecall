@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export type Theme = "light" | "dark" | "system";
 
-const STORAGE_KEY = "opengong-theme";
+const STORAGE_KEY = "convorecall-theme";
 
 const OPTIONS: Array<{ value: Theme; label: string; Icon: typeof Sun }> = [
   { value: "light", label: "Light", Icon: Sun },

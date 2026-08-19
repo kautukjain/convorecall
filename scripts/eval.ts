@@ -4,8 +4,8 @@ import {
   buildTranscriptIndex,
   resolveQuote,
   HARNESS_DEFAULTS,
-} from "@opengong/shared";
-import type { TranscriptSegment } from "@opengong/types";
+} from "@convorecall/shared";
+import type { TranscriptSegment } from "@convorecall/types";
 
 /**
  * Eval runner (ADR-015, docs/Evals.md).

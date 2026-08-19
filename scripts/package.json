@@ -1,10 +1,10 @@
 {
-  "name": "@opengong/scripts",
+  "name": "@convorecall/scripts",
   "private": true,
   "type": "module",
   "version": "0.0.0",
   "dependencies": {
-    "@opengong/shared": "workspace:*",
-    "@opengong/types": "workspace:*"
+    "@convorecall/shared": "workspace:*",
+    "@convorecall/types": "workspace:*"
   }
 }

@@ -1,4 +1,4 @@
-import type { CallNotes, JobStatus, TranscriptSegment } from "@opengong/types";
+import type { CallNotes, JobStatus, TranscriptSegment } from "@convorecall/types";
 
 export const API_URL =
   process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001";
