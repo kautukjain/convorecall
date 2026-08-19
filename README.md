@@ -859,7 +859,7 @@ by **The Hacksmiths**
 **- [Ashith Prabhu](https://github.com/ashith-prabhu-saaslabs)**  
 **- [Kautuk Jain](https://github.com/kautukjain)**  
 **- [Vishnuvardhan S](https://github.com/vishnusaaslabs)**
-- [Nischal V Chadaga]
+**- [Nischal V Chadaga](https://github.com/nischalchadaga-svg)**
 
 *We don’t wrap voice apps.*  
 *We give them away — and make every claim show its receipts.*
