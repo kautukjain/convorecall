@@ -6,7 +6,7 @@ Rehearsed against the real product. Timings are from actual runs, not estimates.
 
 ```bash
 pnpm setup && pnpm seed
-pnpm --filter @opengong/web build     # shoot and demo from a production build
+pnpm --filter @convorecall/web build     # shoot and demo from a production build
 pnpm dev
 ```
 

@@ -39,7 +39,7 @@ PyAI mints a free sandbox key with no account, no email, and no card:
 ```bash
 curl -X POST https://api.pyai.com/v1/sandbox/keys \
   -H 'content-type: application/json' \
-  -d '{"label":"opengong-lite"}'
+  -d '{"label":"convorecall"}'
 ```
 
 The endpoint requires no authentication. It is rate limited **per network**, and returns

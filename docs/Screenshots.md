@@ -1,6 +1,6 @@
 # Screenshots
 
-Captured from a production build (`pnpm --filter @opengong/web build && pnpm start`) at
+Captured from a production build (`pnpm --filter @convorecall/web build && pnpm start`) at
 2× device scale. Regenerate after any UI change — a stale screenshot is a lie with a long
 half-life.
 
@@ -32,7 +32,7 @@ screen during the demo.
 ## Regenerating
 
 ```bash
-pnpm --filter @opengong/web build
+pnpm --filter @convorecall/web build
 (cd apps/web && pnpm start &)
 
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"

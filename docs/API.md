@@ -24,7 +24,7 @@ actually serves. A disagreement between them is a bug in one or the other, and
 
 ```json
 {
-  "type": "https://opengong.dev/problems/upload-too-large",
+  "type": "https://convorecall.dev/problems/upload-too-large",
   "title": "Upload too large",
   "status": 413,
   "detail": "File exceeds the 100 MB limit.",
@@ -60,7 +60,7 @@ secrets. Operator detail goes to `Job.lastError` and the logs, never to the clie
 ### `GET /api/v1/health`
 
 ```json
-{ "ok": true, "service": "opengong-api", "version": "0.1.0" }
+{ "ok": true, "service": "convorecall-api", "version": "0.1.0" }
 ```
 
 Liveness only. Does not touch the database or any provider, so it stays honest under
